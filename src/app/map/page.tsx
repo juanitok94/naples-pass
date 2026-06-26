@@ -24,7 +24,7 @@ function latToPercent(lat: number, flip: boolean): number {
 }
 
 // Latitude boundary between Fifth Ave corridor (stops 1-6) and Third St (stops 7-10)
-// Roughly between Kunjani (~26.1413) and Tony's (~26.1388)
+// Roughly between The Cafe (~26.1420) and Tony's (~26.1388)
 const CORRIDOR_LAT = 26.1400
 
 // Sort core stops for the route line

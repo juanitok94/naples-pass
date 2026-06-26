@@ -87,20 +87,12 @@ The pier silhouette is the passport's visual hero mark.
 | 2 | Brambles English Tea Room | fifth | 340 5th Ave S #102 |
 | 3 | 5th Avenue Coffee Company | fifth | 599 5th Ave S |
 | 4 | The Brick Coffee & Bar | fifth | 531 5th Ave S |
-| 5 | Bontà Bakery | fifth | 490 5th Ave S (est.) |
-| 6 | Kunjani Craft Coffee & Gallery | fifth | ⚠ NEEDS FIELD VERIFICATION |
+| 5 | Bontà Bakery | fifth | 824 5th Ave S #2 |
+| 6 | The Cafe | fifth | 821 5th Ave S |
 | 7 | Tony's Off Third | third | 1300 3rd St S |
 | 8 | Books on Third | third | 1300 3rd St S Suite 201 |
 | 9 | Jane's Cafe on 3rd | third | 1209 3rd St S |
 | 10 | Cove Inn Coffee Shoppe | bay | 900 Broad Ave S |
-
-## ⚠ Kunjani Location Warning
-Some sources place Kunjani Craft Coffee & Gallery near
-Waterside Shops (North Naples, not walkable). Confirm
-the exact walkable downtown address before launch.
-If not walkable, replace with another stop. The shop
-in shops.json uses a placeholder coordinate and is
-marked status: "needs-verification".
 
 ## Bonus/Directory Stops
 - Three Sixteen Coffee & Bakery (13500 Tamiami Trail N)
@@ -191,7 +183,8 @@ Never call stamp functions outside `useEffect` or client components.
 - ⬜ Map page
 - ⬜ Stop pages
 - ⬜ trivia.json (Naples-specific)
-- ⬜ Kunjani location field verification
+- ✅ Kunjani replaced with The Cafe (confirmed-open, 821 5th Ave S)
+- ✅ Bontà address corrected to 824 5th Ave S #2
 - ⬜ Shop photos (after photo walk)
 - ⬜ GitHub repo creation
 - ⬜ Vercel deployment
@@ -210,3 +203,4 @@ Format: [date] - what failed - why - what to do instead.
   some sources place it near Waterside Shops (North Naples), not
   walkable from Old Naples corridor. Marked needs-verification in
   shops.json. Verify before launch and replace if not walkable.
+- 2026-06-26 - Kunjani Craft Coffee & Gallery removed from passport. Verified permanently closed (Apr 13, 2026 per their Facebook) AND former address (780 Seagate Dr) was never walkable from Old Naples corridor. Replaced with The Cafe (821 5th Ave S). Bontà address corrected from estimated 490 5th Ave S to confirmed 824 5th Ave S #2.

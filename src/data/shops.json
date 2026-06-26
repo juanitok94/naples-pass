@@ -182,11 +182,11 @@
   {
     "id": "bonta-bakery",
     "name": "Bontà Bakery",
-    "address": "490 5th Ave S",
+    "address": "824 5th Ave S #2",
     "city": "Naples",
     "state": "FL",
     "zip": "34102",
-    "coordinates": [-81.7957, 26.1417],
+    "coordinates": [-81.795726, 26.1415065],
     "layers": ["bakery"],
     "zone": "fifth",
     "rating": 4.6,
@@ -199,7 +199,7 @@
       "fri": "8AM–6PM",
       "sat": "8AM–6PM",
       "sun": "8AM–6PM",
-      "note": "Opened 2024 — confirm hours before visiting"
+      "note": "Opened 2024 — address confirmed 824 5th Ave S #2"
     },
     "passportStop": 5,
     "passportType": "core",
@@ -217,7 +217,7 @@
       "parkingNote": "5th Avenue South public parking garage on 8th St S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
-    "nearbyPassportStops": ["the-brick-coffee-bar", "kunjani-craft-coffee"],
+    "nearbyPassportStops": ["the-brick-coffee-bar", "the-cafe"],
     "multiLayer": false,
     "instagram": "",
     "website": "",
@@ -225,48 +225,47 @@
     "lastVerified": "2026-06-26"
   },
   {
-    "id": "kunjani-craft-coffee",
-    "name": "Kunjani Craft Coffee & Gallery",
-    "address": "1000 5th Ave S",
+    "id": "the-cafe",
+    "name": "The Cafe",
+    "address": "821 5th Ave S",
     "city": "Naples",
     "state": "FL",
     "zip": "34102",
-    "coordinates": [-81.7920, 26.1413],
+    "coordinates": [-81.7960739, 26.1420097],
     "layers": ["coffee"],
     "zone": "fifth",
-    "rating": 4.6,
-    "reviewCount": 987,
+    "rating": 4.5,
+    "reviewCount": 0,
     "hours": {
-      "mon": "7AM–5PM",
-      "tue": "7AM–5PM",
-      "wed": "7AM–5PM",
-      "thu": "7AM–5PM",
-      "fri": "7AM–5PM",
-      "sat": "7AM–5PM",
-      "sun": "7AM–5PM",
-      "note": "⚠ Location needs field verification before launch"
+      "mon": "8AM–3PM",
+      "tue": "8AM–3PM",
+      "wed": "8AM–3PM",
+      "thu": "8AM–3PM",
+      "fri": "8AM–3PM",
+      "sat": "8AM–3PM",
+      "sun": "8AM–3PM"
     },
     "passportStop": 6,
     "passportType": "core",
     "streetSide": "south",
-    "selloColor": "#2e7d6b",
+    "selloColor": "#c9a060",
     "hygge": true,
     "stamp": {
-      "welcomeLine": "Kunjani 🎨",
-      "subLine": "Small-batch roasted. Fair-trade art on every wall."
+      "welcomeLine": "You made it to The Cafe.",
+      "subLine": "Halfway home. The pier is closer than it feels."
     },
     "story": {
-      "headline": "A gallery that happens to roast coffee.",
-      "body": "Kunjani sources specialty beans in small batches and pairs the café with a fair-trade art collection. Nitro cold brew, pour-over, espresso — the coffee is as serious as the art. This is the stop where you slow down and look at things on the walls.",
-      "insiderTip": "The art is all fair-trade sourced. Ask the barista about a piece if something catches your eye.",
-      "parkingNote": "Street parking available — confirm exact address before visiting."
+      "headline": "Bright food, bright morning.",
+      "body": "Sit on the patio at The Cafe and you'll see why locals keep coming back. Healthy bowls, smoked salmon plates, and barista drinks built for the kind of slow Naples morning that doesn't ask you to be anywhere yet. This is your turn-the-corner stop — the last sip of 5th before you cross to 3rd Street South.",
+      "insiderTip": "Order the Blue Boost — matcha, butterfly pea, vanilla, lavender, oat milk. It's the drink locals don't put on Instagram.",
+      "parkingNote": "Street parking on 5th; free public garage two blocks east on 6th St S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
     "nearbyPassportStops": ["bonta-bakery", "tonys-off-third"],
     "multiLayer": false,
     "instagram": "",
     "website": "",
-    "status": "needs-verification",
+    "status": "confirmed-open",
     "lastVerified": "2026-06-26"
   },
   {
