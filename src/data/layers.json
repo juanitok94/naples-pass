@@ -1,0 +1,38 @@
+[
+  {
+    "id": "coffee",
+    "label": "Coffee",
+    "color": "#0d1f3c",
+    "bg": "#f5f0e8",
+    "icon": "☕",
+    "passportLayer": true,
+    "description": "The 10 core passport stops — coffee, tea, bakery, books"
+  },
+  {
+    "id": "tea",
+    "label": "Tea",
+    "color": "#c9a060",
+    "bg": "#fdf6e8",
+    "icon": "🍵",
+    "passportLayer": false,
+    "description": "Tea rooms and lounges"
+  },
+  {
+    "id": "bakery",
+    "label": "Bakery",
+    "color": "#b5451b",
+    "bg": "#faeee8",
+    "icon": "🥐",
+    "passportLayer": false,
+    "description": "Artisan bakeries and pastry shops"
+  },
+  {
+    "id": "books",
+    "label": "Books",
+    "color": "#3d2b6b",
+    "bg": "#eeeaf5",
+    "icon": "📖",
+    "passportLayer": false,
+    "description": "Independent bookstores"
+  }
+]

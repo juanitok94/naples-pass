@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haywood Hoppers · West Asheville · Peachy Kean DevOps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:       #f5edd8;
+      --surface:  #fffcf5;
+      --border:   #e0cdaa;
+      --primary:  #6b3f1e;
+      --accent:   #c8973a;
+      --text:     #3b1f0a;
+      --muted:    #8a6040;
+      --badge-bg: rgba(107,63,30,0.09);
+      --badge-fg: #6b3f1e;
+      --badge-bd: rgba(107,63,30,0.18);
+      --shadow:   rgba(60,30,0,0.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 16px; line-height: 1.6; }
+
+    .hero { text-align: center; padding: 3.5rem 1.5rem 3rem; background: var(--primary); border-bottom: 4px solid var(--accent); }
+    .hero-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 1rem; }
+    .hero-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 8vw, 4rem); color: #fff; line-height: 1.1; margin-bottom: 0.4rem; }
+    .hero-street { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.16em; color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 0.75rem; }
+    .hero-tagline { font-style: italic; font-size: 1.05rem; color: rgba(255,255,255,0.6); max-width: 34rem; margin: 0 auto 1.75rem; }
+    .hero-cta { display: inline-block; padding: 0.6rem 1.5rem; background: var(--accent); color: var(--text); font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; font-weight: 500; }
+    .hero-cta:hover { opacity: 0.85; }
+
+    .pitch { max-width: 50rem; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; text-align: center; border-bottom: 1px solid var(--border); }
+    .pitch h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.55rem; color: var(--text); margin-bottom: 0.65rem; }
+    .pitch p { font-size: 1.05rem; color: var(--muted); max-width: 36rem; margin: 0 auto 1.5rem; }
+    .pitch-stats { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--primary); line-height: 1; }
+    .stat-lbl { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+
+    .filters { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); padding: 0.7rem 1.25rem; display: flex; gap: 0.4rem; overflow-x: auto; scrollbar-width: none; }
+    .filters::-webkit-scrollbar { display: none; }
+    .filter-btn { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.7rem; border: 1px solid var(--border); background: var(--surface); color: var(--muted); cursor: pointer; white-space: nowrap; transition: all 0.12s; }
+    .filter-btn:hover { color: var(--primary); border-color: var(--primary); }
+    .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    .cards { max-width: 74rem; margin: 0 auto; padding: 1.75rem 1.25rem 3rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(268px, 1fr)); gap: 1.1rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); padding: 1.1rem 1.2rem; transition: transform 0.12s, box-shadow 0.12s; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 4px 18px var(--shadow); }
+    .card-bar { height: 3px; margin: -1.1rem -1.2rem 0.9rem; }
+    .card-stop { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+    .card-name { font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; color: var(--text); line-height: 1.2; margin-bottom: 0.2rem; }
+    .card-addr { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: var(--muted); margin-bottom: 0.7rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.65rem; }
+    .badge { font-family: 'IBM Plex Mono', monospace; font-size: 0.56rem; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.18rem 0.45rem; background: var(--badge-bg); color: var(--badge-fg); border: 1px solid var(--badge-bd); }
+    .card-hours { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .card-tip { font-style: italic; font-size: 0.87rem; color: var(--text); border-left: 2px solid var(--accent); padding-left: 0.6rem; margin-bottom: 0.6rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .card-meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem; }
+    .card-rating { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: var(--muted); }
+    .card-links { display: flex; gap: 0.65rem; }
+    .card-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+    .card-link:hover { opacity: 0.65; }
+
+    .footer { background: var(--primary); color: rgba(255,255,255,0.55); text-align: center; padding: 2.5rem 1.5rem; border-top: 3px solid var(--accent); }
+    .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: rgba(255,255,255,0.9); margin-bottom: 0.35rem; }
+    .footer-sub { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.13em; text-transform: uppercase; margin-bottom: 1.1rem; }
+    .footer-cta { display: inline-block; padding: 0.5rem 1.25rem; border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.75); font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; }
+    .footer-cta:hover { border-color: var(--accent); color: var(--accent); }
+
+    @media (max-width: 460px) { .cards { grid-template-columns: 1fr; padding: 1.25rem 1rem 2.5rem; } }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-eyebrow">Peachy Kean DevOps LLC · Walkbook Sample</div>
+  <h1 class="hero-title">Haywood Hoppers</h1>
+  <div class="hero-street">Haywood Road · West Asheville, NC 28806</div>
+  <p class="hero-tagline">10 stops. Coffee, community, and the neighborhood that built itself.</p>
+  <a href="/" class="hero-cta">Open the Full Walkbook ↗</a>
+</header>
+
+<section class="pitch">
+  <h2>What is a Walkbook?</h2>
+  <p>A mobile-first digital passport for your street. Visitors collect stamps, discover insider tips, and stay longer than they planned. No app download. No login. Just walk.</p>
+  <div class="pitch-stats">
+    <div><div class="stat-num">10</div><div class="stat-lbl">Core Stops</div></div>
+    <div><div class="stat-num">0</div><div class="stat-lbl">Ads</div></div>
+    <div><div class="stat-num">∞</div><div class="stat-lbl">Local</div></div>
+  </div>
+</section>
+
+<nav class="filters" id="filters"></nav>
+<main class="cards" id="cards"></main>
+
+<footer class="footer">
+  <div class="footer-brand">Peachy Kean DevOps, LLC</div>
+  <div class="footer-sub">Walkbooks for independent business districts</div>
+  <a href="mailto:john@peachykeandev.com" class="footer-cta">Get a Walkbook for your street →</a>
+</footer>
+
+<script>
+const SHOPS = [
+  {id:"cooperative-coffee-roasters",name:"Cooperative Coffee Roasters",address:"210 Haywood Rd",city:"Asheville",state:"NC",layers:["coffee"],passportStop:1,selloColor:"#1a5c2a",rating:4.9,instagram:"cooperativecoffeeroasters",website:"cooperativecoffeeroasters.com",hours:{mon:"8AM–2PM",tue:"8AM–2PM",wed:"8AM–2PM",thu:"8AM–2PM",fri:"8AM–2PM",sat:"8AM–2PM",sun:"8AM–2PM"},tip:"Ask for the Levity roast if you want something bright. Gravity if you want depth. They'll know what you mean."},
+  {id:"battlecat-coffee-bar",name:"BattleCat Coffee Bar",address:"373 Haywood Rd",city:"Asheville",state:"NC",layers:["coffee"],passportStop:2,selloColor:"#8b1a1a",rating:4.6,instagram:"battlecatcoffeebar",website:null,hours:{mon:"7AM–6PM",tue:"7AM–6PM",wed:"7AM–6PM",thu:"7AM–6PM",fri:"7AM–6PM",sat:"7AM–6PM",sun:"7AM–6PM"},tip:"The jalapeño kolache disappears by 9am on weekends. Arrive early or make peace with the ham. Both are good. The jalapeño is better."},
+  {id:"flora-forage",name:"Flora & Forage",address:"428 Haywood Rd",city:"Asheville",state:"NC",layers:["coffee","bars"],passportStop:3,selloColor:"#2a6b2a",rating:4.7,instagram:"floraasheville",website:"florabotanicalliving.com",hours:{mon:"8AM–4PM",tue:"closed",wed:"8AM–6PM",thu:"8AM–6PM",fri:"8AM–6PM",sat:"8AM–6PM",sun:"9AM–4PM"},tip:"The Tulsi Rose tea is quietly extraordinary. Don't overlook it for the coffee. Thursday or Friday evening after 5 — it's a different place."},
+  {id:"haywood-famous",name:"Haywood Famous",address:"508 Haywood Rd",city:"Asheville",state:"NC",layers:["coffee"],passportStop:4,selloColor:"#1a3a6b",rating:4.9,instagram:"haywoodfamous",website:"haywoodfamous.com",hours:{mon:"8AM–1PM",tue:"8AM–1PM",wed:"closed",thu:"8AM–10PM",fri:"8AM–10PM",sat:"8AM–10PM",sun:"8AM–1PM"},tip:"Come back on a Thursday evening. Different place entirely. Bring someone you want to talk to."},
+  {id:"bad-manners-coffee",name:"Bad Manners Coffee",address:"697 Haywood Rd",city:"Asheville",state:"NC",layers:["coffee"],passportStop:5,selloColor:"#1a5c5c",rating:4.8,instagram:"badmannerscoffee",website:null,hours:{mon:"8AM–2PM",tue:"8AM–2PM",wed:"8AM–2PM",thu:"8AM–2PM",fri:"8AM–2PM",sat:"9AM–3PM",sun:"9AM–3PM"},tip:"Suite G — look for the letter on the door. The seasonal drinks change often and the staff are genuinely excited to tell you about them. Ask."},
+  {id:"rowan-coffee",name:"Rowan Coffee",address:"785 Haywood Rd",city:"Asheville",state:"NC",layers:["coffee","bars"],passportStop:6,selloColor:"#4a5c1a",rating:4.7,instagram:"rowancoffeeavl",website:"rowancoffee.com",hours:{mon:"7:30AM–5PM",tue:"7:30AM–5PM",wed:"7:30AM–5PM",thu:"7:30AM–8PM",fri:"7:30AM–8PM",sat:"7:30AM–8PM",sun:"7:30AM–8PM"},tip:"Friday oysters. Show up at 4pm, order a glass of something cold, eat oysters on Haywood Road and feel like you're somewhere else entirely."},
+  {id:"odds-cafe",name:"Odd's Cafe",address:"800 Haywood Rd",city:"Asheville",state:"NC",layers:["coffee"],passportStop:7,selloColor:"#2a3a4a",rating:4.6,instagram:"oddscafeavl",website:"oddscafe.com",hours:{mon:"7AM–7PM",tue:"7AM–7PM",wed:"7AM–7PM",thu:"7AM–7PM",fri:"7AM–7PM",sat:"7AM–7PM",sun:"7AM–7PM"},tip:"The almond cake. People who know Odd's always mention the almond cake. It's not always there — when it is, get it."},
+  {id:"plant-bar",name:"Plant Bar",address:"919 Haywood Rd",city:"Asheville",state:"NC",layers:["coffee","cannabis"],passportStop:8,selloColor:"#5c1a2a",rating:4.6,instagram:"visitplantbar",website:"visitplantbar.com",hours:{mon:"8AM–10PM",tue:"8AM–10PM",wed:"8AM–10PM",thu:"8AM–10PM",fri:"8AM–10PM",sat:"8AM–10PM",sun:"8AM–10PM"},tip:"The Blue Lotus Cacao iced with oat milk is unlike anything else on Haywood Road. Order it once and you'll understand why people come back specifically for it."},
+  {id:"izzys-coffee-house",name:"Izzy's Coffee House",address:"976 Haywood Rd",city:"Asheville",state:"NC",layers:["coffee"],passportStop:9,selloColor:"#3b1f0a",rating:4.5,instagram:"izzyscoffeehouse",website:null,hours:{mon:"7:30AM–6PM",tue:"7:30AM–6PM",wed:"7:30AM–6PM",thu:"7:30AM–6PM",fri:"7:30AM–6PM",sat:"7:30AM–6PM",sun:"7:30AM–6PM"},tip:"The habanero cranberry cream cheese on an everything bagel. That's the order. That's been the order for years. Trust it."},
+  {id:"west-end-bakery",name:"The West End Bakery",address:"757 Haywood Rd",city:"Asheville",state:"NC",layers:["bakery","food"],passportStop:10,selloColor:"#c8973a",rating:4.3,instagram:"westendbakeryavl",website:null,hours:{mon:"closed",tue:"closed",wed:"8AM–4PM",thu:"8AM–4PM",fri:"8AM–4PM",sat:"8AM–4PM",sun:"8:30AM–4PM"},tip:"Order ahead to skip the line. The matcha is excellent. Free parking spaces right outside — unheard of for this area."}
+];
+
+const LABELS = {coffee:"☕ Coffee",restaurants:"🍽 Food",bars:"🍺 Bar",breweries:"🍻 Brewery",music:"🎵 Music",arts:"🎨 Arts",galleries:"🖼 Gallery",museums:"🏛 Museum",attractions:"⭐ Must-See",shops:"🛍 Shop",history:"📜 History",outdoors:"🏔 Outdoors",bakery:"🥐 Bakery",wineries:"🍷 Winery",lodging:"🛏 Lodging",historic:"🏠 Historic",food:"🍜 Food",cannabis:"🌿 Wellness"};
+
+function hrs(h) {
+  const days = ['mon','tue','wed','thu','fri','sat','sun'];
+  const open = days.filter(d => h[d] && !h[d].toLowerCase().includes('closed') && !h[d].toLowerCase().includes('private'));
+  if (!open.length) return '— see website';
+  const times = [...new Set(open.map(d => h[d]))];
+  if (times.length === 1 && open.length === 7) return 'Daily · ' + times[0];
+  if (times.length === 1) return open.length + ' days/wk · ' + times[0];
+  return open.length + ' days/wk · from ' + h[open[0]];
+}
+
+function render(filter) {
+  const list = filter === 'all' ? SHOPS : SHOPS.filter(s => s.layers.includes(filter));
+  document.getElementById('cards').innerHTML = list.map(s => {
+    const links = [
+      s.website ? `<a class="card-link" href="${s.website.startsWith('http')?s.website:'https://'+s.website}" target="_blank" rel="noopener">Website ↗</a>` : '',
+      s.instagram ? `<a class="card-link" href="https://instagram.com/${s.instagram}" target="_blank" rel="noopener">Instagram ↗</a>` : ''
+    ].filter(Boolean).join('');
+    return `<article class="card">
+      <div class="card-bar" style="background:${s.selloColor||'var(--accent)'}"></div>
+      ${s.passportStop ? `<div class="card-stop">Stop ${s.passportStop} of 10</div>` : ''}
+      <h2 class="card-name">${s.name}</h2>
+      <div class="card-addr">${s.address} · ${s.city}, ${s.state}</div>
+      <div class="badges">${s.layers.map(l=>`<span class="badge">${LABELS[l]||l}</span>`).join('')}</div>
+      <div class="card-hours">⏱ ${hrs(s.hours)}</div>
+      ${s.tip ? `<div class="card-tip">${s.tip}</div>` : ''}
+      <div class="card-meta">
+        ${s.rating ? `<span class="card-rating">★ ${s.rating.toFixed(1)}</span>` : '<span></span>'}
+        ${links ? `<div class="card-links">${links}</div>` : ''}
+      </div>
+    </article>`;
+  }).join('');
+}
+
+function init() {
+  const layers = [...new Set(SHOPS.flatMap(s => s.layers))].filter(l => LABELS[l]);
+  const nav = document.getElementById('filters');
+  nav.innerHTML = `<button class="filter-btn active" data-f="all">All (${SHOPS.length})</button>` +
+    layers.map(l => {
+      const n = SHOPS.filter(s => s.layers.includes(l)).length;
+      return `<button class="filter-btn" data-f="${l}">${LABELS[l]} (${n})</button>`;
+    }).join('');
+  nav.addEventListener('click', e => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    nav.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.f);
+  });
+}
+
+init();
+render('all');
+</script>
+</body>
+</html>
