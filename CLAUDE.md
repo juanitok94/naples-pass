@@ -83,8 +83,8 @@ The pier silhouette is the passport's visual hero mark.
 ## The 10 Core Stops (north to south)
 | # | Shop | Zone | Address |
 |---|------|------|---------|
-| 1 | Forever Fiore Tea Lounge | design | 950 5th Ave N |
-| 2 | Brambles English Tea Room | fifth | 340 5th Ave S #102 |
+| 1 | Forever Fiore Tea Lounge | design | 970 5th Ave N |
+| 2 | Brambles English Tea Room | fifth | 340 5th Ave S |
 | 3 | 5th Avenue Coffee Company | fifth | 599 5th Ave S |
 | 4 | The Brick Coffee & Bar | fifth | 531 5th Ave S |
 | 5 | Bontà Bakery | fifth | 824 5th Ave S #2 |
@@ -204,3 +204,4 @@ Format: [date] - what failed - why - what to do instead.
   walkable from Old Naples corridor. Marked needs-verification in
   shops.json. Verify before launch and replace if not walkable.
 - 2026-06-26 - Kunjani Craft Coffee & Gallery removed from passport. Verified permanently closed (Apr 13, 2026 per their Facebook) AND former address (780 Seagate Dr) was never walkable from Old Naples corridor. Replaced with The Cafe (821 5th Ave S). Bontà address corrected from estimated 490 5th Ave S to confirmed 824 5th Ave S #2.
+- 2026-06-26 - Revision 2 polish for client demo (M.A. Vadini). Renamed homepage from "Old Naples Passport" to "Naples, Florida" with tagline-only hero; "Passport" now lives only on CTA. Replaced emoji line with custom SVG pier silhouette (navy + gold sun, Option 3). Added Peachy Kean DevOps footer attribution with mailto. Fixed map projection (route-position by passportStop, not latitude) — Forever Fiore no longer isolated. Filter pills now work exclusively (single selectedLayer state, radio-button behavior). Hidden Collection spacing fixed with defensive inline-style gap and full shop names. Verified Forever Fiore address (970 5th Ave N, was 950) and dropped Brambles suite. Cove Inn insider tip updated with cash-only detail.

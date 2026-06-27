@@ -19,19 +19,47 @@ export default function Home() {
       {/* HEADER */}
       <div className="bg-[#0d1f3c] px-6 py-10 text-center border-b-4 border-[#c9a060]">
         <p className="text-[#c9a060] text-xs tracking-[0.3em] uppercase mb-2 font-mono">
-          Old Naples, FL
+          A Walking Guide
         </p>
         <h1 className="font-serif text-5xl font-black text-[#f5f0e8] leading-none">
-          Old Naples
+          Naples,
         </h1>
         <h2 className="font-serif text-4xl italic text-[#c9a060] leading-none mt-1">
-          Passport
+          Florida
         </h2>
         <p className="text-[#c9a060] text-sm italic mt-3 opacity-70">
           Walk the corridor. End at the pier.
         </p>
-        <div className="flex items-center justify-center gap-3 mt-4 text-[#c9a060] opacity-50 text-sm">
-          <span>☕</span><span>✦</span><span>⚓</span>
+        <div className="mt-6 max-w-sm mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" preserveAspectRatio="xMidYMid meet" className="w-full">
+            <circle cx="320" cy="36" r="22" fill="#c9a060" opacity="0.4"/>
+            <circle cx="320" cy="36" r="14" fill="#c9a060" opacity="0.6"/>
+            <g fill="#c9a060">
+              <rect x="20" y="56" width="320" height="3"/>
+              <g>
+                <rect x="285" y="52" width="50" height="7"/>
+                <rect x="295" y="38" width="30" height="14"/>
+                <polygon points="291,38 310,28 329,38"/>
+              </g>
+              <g>
+                <rect x="22" y="59" width="1.5" height="22"/>
+                <rect x="46" y="59" width="1.5" height="22"/>
+                <rect x="70" y="59" width="1.5" height="22"/>
+                <rect x="94" y="59" width="1.5" height="22"/>
+                <rect x="118" y="59" width="1.5" height="22"/>
+                <rect x="142" y="59" width="1.5" height="22"/>
+                <rect x="166" y="59" width="1.5" height="22"/>
+                <rect x="190" y="59" width="1.5" height="22"/>
+                <rect x="214" y="59" width="1.5" height="22"/>
+                <rect x="238" y="59" width="1.5" height="22"/>
+                <rect x="262" y="59" width="1.5" height="22"/>
+                <rect x="281" y="59" width="1.5" height="22"/>
+                <rect x="295" y="59" width="1.5" height="22"/>
+                <rect x="311" y="59" width="1.5" height="22"/>
+                <rect x="327" y="59" width="1.5" height="22"/>
+              </g>
+            </g>
+          </svg>
         </div>
       </div>
 
@@ -170,14 +198,14 @@ export default function Home() {
             Five stops where Old Naples slows all the way down.
             Find all five.
           </p>
-          <div className="flex flex-wrap gap-2 mt-3">
+          <div className="flex flex-wrap mt-3" style={{ gap: '0.5rem' }}>
             {hyggeStops.map(shop => (
               <span
                 key={shop.id}
-                className="text-xs font-mono px-2 py-1 rounded-sm text-white opacity-80"
+                className="inline-block text-xs font-mono px-2 py-1 rounded-sm text-white opacity-80"
                 style={{ backgroundColor: shop.selloColor }}
               >
-                {shop.name.split(' ')[0]}
+                {shop.name}
               </span>
             ))}
           </div>
@@ -189,10 +217,24 @@ export default function Home() {
         <p className="font-serif italic text-[#c9a060] text-sm opacity-70 leading-relaxed">
           Ten stops. Two streets. End at the pier.
           <br />
-          These aren&apos;t tourist traps — they&apos;re what Old Naples actually is.
+          These aren&apos;t tourist traps — they&apos;re what Naples actually is.
         </p>
-        <p className="font-mono text-[10px] text-[#c9a060] opacity-50 tracking-widest mt-4">
-          #OldNaplesPassport · #NaplesFlorida · #NaplesPier
+        <div className="mt-6 pt-6 border-t border-[#c9a060]/20 max-w-md mx-auto">
+          <p className="font-mono text-[10px] tracking-widest text-[#c9a060] opacity-60 uppercase">
+            Built by Peachy Kean DevOps
+          </p>
+          <p className="font-serif italic text-[#c9a060] text-xs opacity-60 mt-1">
+            West Asheville, NC
+          </p>
+          <a
+            href="mailto:john@peachykeandev.com"
+            className="inline-block font-mono text-[11px] text-[#c9a060] opacity-80 hover:opacity-100 mt-3 underline underline-offset-4"
+          >
+            john@peachykeandev.com
+          </a>
+        </div>
+        <p className="font-mono text-[10px] text-[#c9a060] opacity-40 tracking-widest mt-6">
+          #NaplesFlorida · #NaplesPier
         </p>
       </div>
 

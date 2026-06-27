@@ -2,11 +2,11 @@
   {
     "id": "forever-fiore",
     "name": "Forever Fiore Tea Lounge",
-    "address": "950 5th Ave N",
+    "address": "970 5th Ave N",
     "city": "Naples",
     "state": "FL",
     "zip": "34102",
-    "coordinates": [-81.7988, 26.1503],
+    "coordinates": [-81.7952549, 26.1526743],
     "layers": ["tea"],
     "zone": "design",
     "rating": 4.5,
@@ -47,7 +47,7 @@
   {
     "id": "brambles-english-tea-room",
     "name": "Brambles English Tea Room",
-    "address": "340 5th Ave S #102",
+    "address": "340 5th Ave S",
     "city": "Naples",
     "state": "FL",
     "zip": "34102",
@@ -437,7 +437,7 @@
     "story": {
       "headline": "Old Florida, right at the water.",
       "body": "The Cove Inn Coffee Shoppe has been serving classic American breakfast in the lobby of the Cove Inn on Naples Bay for as long as anyone can remember. The pancakes are famous. The marina views are free. This is where the walk ends — one final stamp, then you walk to the end of the pier and let the Gulf do the rest.",
-      "insiderTip": "Naples Pier is a 5-minute walk from here. Go. Stand at the end. Watch the pelicans. You've earned it.",
+      "insiderTip": "Cash or check only — there's an ATM on site. Locals call it the best-kept hole-in-the-wall in town. Naples Pier is a 5-minute walk from here. Go. Stand at the end. Watch the pelicans. You've earned it.",
       "parkingNote": "Cove Inn has guest parking. Street parking on Broad Ave S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },

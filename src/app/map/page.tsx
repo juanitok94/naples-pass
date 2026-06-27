@@ -10,22 +10,18 @@ import { getStamps, type StampRecord } from '@/lib/stamps'
 const shops = shopsData as any[]
 const layers = layersData as any[]
 
-// Naples stops run north (high lat) to south (low lat).
-// Project latitude → horizontal position: north = left, south = right.
-const allLats = shops.map(s => s.coordinates[1])
-const minLat = Math.min(...allLats)
-const maxLat = Math.max(...allLats)
-const latSpan = maxLat - minLat || 1
-
-function latToPercent(lat: number, flip: boolean): number {
-  // Default: North (high lat) = left, South (low lat) = right
-  const pct = ((maxLat - lat) / latSpan) * 100
+// Stops projected by passport order, not real geography.
+// Y offset hints at which corridor: design (top), fifth/third (alternating middle), bay (bottom).
+function stopToX(passportStop: number, flip: boolean): number {
+  const pct = ((passportStop - 1) / 9) * 92 + 4
   return flip ? 100 - pct : pct
 }
 
-// Latitude boundary between Fifth Ave corridor (stops 1-6) and Third St (stops 7-10)
-// Roughly between The Cafe (~26.1420) and Tony's (~26.1388)
-const CORRIDOR_LAT = 26.1400
+function zoneToYOffset(zone: string, passportStop: number): number {
+  if (zone === 'design') return -55
+  if (zone === 'bay') return 55
+  return passportStop % 2 === 1 ? -35 : 35
+}
 
 // Sort core stops for the route line
 const coreStops = shops
@@ -37,7 +33,7 @@ const bonusStops = shops.filter(s => s.passportType === 'bonus')
 export default function MapPage() {
   const [stamps, setStamps] = useState<StampRecord>({})
   const [mounted, setMounted] = useState(false)
-  const [activeLayers, setActiveLayers] = useState<Set<string>>(new Set(['coffee']))
+  const [selectedLayer, setSelectedLayer] = useState<string>('coffee')
   const [selectedStop, setSelectedStop] = useState<string | null>(null)
   const [flipped, setFlipped] = useState(false)
 
@@ -52,25 +48,24 @@ export default function MapPage() {
     return () => window.removeEventListener('focus', sync)
   }, [])
 
-  function toggleLayer(layerId: string) {
-    setActiveLayers(prev => {
-      const next = new Set(prev)
-      if (next.has(layerId)) {
-        if (layerId === 'coffee') return next
-        next.delete(layerId)
-      } else {
-        next.add(layerId)
-      }
-      return next
-    })
+  function selectLayer(layerId: string) {
+    setSelectedLayer(layerId)
   }
 
-  const visibleShops = useMemo(() => {
+  const visibleCoreStops = useMemo(() => {
+    return coreStops.filter(s => s.layers.includes(selectedLayer))
+  }, [selectedLayer])
+
+  const visibleBonusStops = useMemo(() => {
+    return bonusStops.filter(s => s.layers.includes(selectedLayer))
+  }, [selectedLayer])
+
+  const visibleDirectoryStops = useMemo(() => {
     return shops.filter(s => {
-      if (s.passportType === 'core' || s.passportType === 'bonus') return true
-      return s.layers.some((l: string) => activeLayers.has(l))
+      if (s.passportType) return false
+      return s.layers.includes(selectedLayer)
     })
-  }, [activeLayers])
+  }, [selectedLayer])
 
   const selectedShop = selectedStop ? shops.find(s => s.id === selectedStop) : null
   const coreStamped = coreStops.filter(s => stamps[s.id]).length
@@ -85,7 +80,7 @@ export default function MapPage() {
           className="font-mono text-[10px] tracking-widest text-[#c9a060] opacity-60
                      hover:opacity-100 transition-opacity uppercase"
         >
-          ← Old Naples Passport
+          ← Naples Passport
         </Link>
         <h1 className="font-serif text-3xl font-black text-[#f5f0e8] mt-2">
           The Map
@@ -98,15 +93,15 @@ export default function MapPage() {
       {/* LAYER FILTERS */}
       <div className="max-w-2xl mx-auto px-4 pt-5">
         <p className="text-center font-mono text-[10px] tracking-widest text-[#1a3560] opacity-50 uppercase mb-3">
-          Tap to filter · Coffee always on
+          Tap to filter by type
         </p>
         <div className="flex flex-wrap gap-2 justify-center">
           {layers.map(layer => {
-            const active = activeLayers.has(layer.id)
+            const active = selectedLayer === layer.id
             return (
               <button
                 key={layer.id}
-                onClick={() => toggleLayer(layer.id)}
+                onClick={() => selectLayer(layer.id)}
                 className={`
                   flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono
                   transition-all border
@@ -160,7 +155,7 @@ export default function MapPage() {
             {/* Corridor crossing: 5th Ave → 3rd St */}
             <div
               className="absolute top-0 bottom-0 w-px transition-all duration-500"
-              style={{ left: `${latToPercent(CORRIDOR_LAT, flipped)}%` }}
+              style={{ left: `${stopToX(6.5, flipped)}%` }}
             >
               <div className="absolute inset-0 bg-[#c9a060] opacity-30" />
               <div className="absolute top-2 left-1/2 -translate-x-1/2 whitespace-nowrap">
@@ -173,20 +168,20 @@ export default function MapPage() {
             {/* Cross-street labels */}
             <div
               className="absolute font-mono text-[8px] tracking-widest text-[#1a3560] opacity-30 uppercase"
-              style={{ top: '24px', left: `${latToPercent(26.1415, flipped)}%`, transform: 'translateX(-50%)' }}
+              style={{ top: '24px', left: `${stopToX(3, flipped)}%`, transform: 'translateX(-50%)' }}
             >
               5th Ave S
             </div>
             <div
               className="absolute font-mono text-[8px] tracking-widest text-[#1a3560] opacity-30 uppercase"
-              style={{ top: '24px', left: `${latToPercent(26.1388, flipped)}%`, transform: 'translateX(-50%)' }}
+              style={{ top: '24px', left: `${stopToX(8.5, flipped)}%`, transform: 'translateX(-50%)' }}
             >
               3rd St S
             </div>
 
             {/* Zone labels */}
             {(() => {
-              const crossPct = latToPercent(CORRIDOR_LAT, flipped)
+              const crossPct = stopToX(6.5, flipped)
               const fifthCenter = flipped
                 ? crossPct + (100 - crossPct) / 2
                 : crossPct / 2
@@ -212,10 +207,9 @@ export default function MapPage() {
             })()}
 
             {/* Non-passport layer dots */}
-            {visibleShops
-              .filter(s => !s.passportType)
+            {visibleDirectoryStops
               .map(shop => {
-                const x = latToPercent(shop.coordinates[1], flipped)
+                const x = stopToX(5, flipped)
                 const layerColor = layers.find(l => l.id === shop.layers[0])?.color || '#999'
                 const hash = shop.id.charCodeAt(0) + shop.id.charCodeAt(1)
                 const yOffset = (hash % 7) * 18 - 63
@@ -240,8 +234,8 @@ export default function MapPage() {
               })}
 
             {/* Bonus stops */}
-            {bonusStops.map(shop => {
-              const x = latToPercent(shop.coordinates[1], flipped)
+            {visibleBonusStops.map(shop => {
+              const x = stopToX(shop.passportStop || 5, flipped)
               const stamped = !!stamps[shop.id]
               const hash = shop.id.charCodeAt(2) + shop.id.charCodeAt(3)
               const yOffset = (hash % 5) * 14 - 28
@@ -267,11 +261,11 @@ export default function MapPage() {
             })}
 
             {/* Core passport stops */}
-            {coreStops.map(shop => {
-              const x = latToPercent(shop.coordinates[1], flipped)
+            {visibleCoreStops.map(shop => {
+              const x = stopToX(shop.passportStop, flipped)
               const stamped = !!stamps[shop.id]
-              const above = shop.passportStop % 2 === 1
-              const yOffset = above ? -40 : 40
+              const yOffset = zoneToYOffset(shop.zone, shop.passportStop)
+              const above = yOffset < 0
               return (
                 <button
                   key={shop.id}
@@ -468,7 +462,6 @@ export default function MapPage() {
         <div className="flex flex-col gap-1.5">
           {coreStops.map((shop, i) => {
             const stamped = !!stamps[shop.id]
-            // Divider between stop 6 and 7 (fifth → third crossing)
             const showDivider = i === 6
             return (
               <div key={shop.id}>
