@@ -2,10 +2,17 @@
 
 export default function SaturdayBanner() {
   const now = new Date()
-  const isSaturday = now.getDay() === 6
-  const isBeforeClose =
-    now.getHours() < 11 ||
-    (now.getHours() === 11 && now.getMinutes() < 30)
+
+  // Convert to Eastern Time explicitly
+  const eastern = new Date(now.toLocaleString('en-US', {
+    timeZone: 'America/New_York',
+  }))
+
+  const isSaturday = eastern.getDay() === 6
+  const hour = eastern.getHours()
+  const minute = eastern.getMinutes()
+  const isBeforeClose = hour < 11 || (hour === 11 && minute < 30)
+
   if (!isSaturday || !isBeforeClose) return null
   return (
     <div className="bg-[#c9a060] text-[#0d1f3c] text-center py-3 px-6">
