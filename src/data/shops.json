@@ -256,15 +256,15 @@
     },
     "story": {
       "headline": "Bright food, bright morning.",
-      "body": "Sit on the patio at The Cafe and you'll see why locals keep coming back. Healthy bowls, smoked salmon plates, and barista drinks built for the kind of slow Naples morning that doesn't ask you to be anywhere yet. This is your turn-the-corner stop — the last sip of 5th before you cross to 3rd Street South.",
-      "insiderTip": "Order the Blue Boost — matcha, butterfly pea, vanilla, lavender, oat milk. It's the drink locals don't put on Instagram.",
+      "body": "The Cafe has Scandinavian roots — the kind of place that values good ingredients over complicated preparation. Sit on the corner patio at 8th and Fifth and watch Naples wake up. Healthy bowls, smoked salmon plates, pastries worth skipping the next stop for. It's been ranked among the top 20 restaurants in Naples on TripAdvisor for years, which locals already knew. This is your turn-the-corner stop — the last breath of 5th before you cross to 3rd Street South.",
+      "insiderTip": "Order the Blue Boost — matcha, butterfly pea, vanilla, lavender, oat milk. The drink locals keep off Instagram.",
       "parkingNote": "Street parking on 5th; free public garage two blocks east on 6th St S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
     "nearbyPassportStops": ["bonta-bakery", "tonys-off-third"],
     "multiLayer": false,
-    "instagram": "",
-    "website": "",
+    "instagram": "thecafeon5th",
+    "website": "www.thecafeon5th.com",
     "status": "confirmed-open",
     "lastVerified": "2026-06-26"
   },
@@ -423,7 +423,7 @@
       "fri": "7AM–2PM",
       "sat": "7AM–2PM",
       "sun": "7AM–2PM",
-      "note": "Breakfast diner hours — the Pier is a 5-minute walk"
+      "note": "Breakfast diner hours — early bird gets the bay view"
     },
     "passportStop": 10,
     "passportType": "core",
@@ -447,5 +447,44 @@
     "website": "coveinnnaples.com",
     "status": "confirmed-open",
     "lastVerified": "2026-06-26"
+  },
+  {
+    "id": "third-street-farmers-market",
+    "name": "Third Street South Farmers Market",
+    "address": "245 13th Ave S",
+    "city": "Naples",
+    "state": "FL",
+    "zip": "34102",
+    "coordinates": [-81.8017708, 26.1311664],
+    "layers": ["coffee", "bakery"],
+    "zone": "third",
+    "rating": 0,
+    "reviewCount": 0,
+    "hours": {
+      "mon": "Closed",
+      "tue": "Closed",
+      "wed": "Closed",
+      "thu": "Closed",
+      "fri": "Closed",
+      "sat": "7:30AM–11:30AM",
+      "sun": "Closed",
+      "note": "Saturday only, 7:30–11:30 AM year-round. One exception per year for Naples St. Patrick's Day parade."
+    },
+    "passportType": "bonus",
+    "selloColor": "#1a3560",
+    "hygge": false,
+    "story": {
+      "headline": "Saturday morning, the way it's supposed to be.",
+      "body": "Since 1994, the Third Street South Farmers Market has taken over the parking lot behind Tommy Bahama every Saturday morning. Nearly 60 vendors — fresh produce, Colombian arepas, mushrooms, pastries, fresh-roasted coffee, cut flowers, and more. The market draws locals who have been coming for thirty years and visitors who stumble in and never leave. Live music, dogs everywhere, the full Naples Saturday energy. Opens at 7:30 — get there early.",
+      "insiderTip": "The Argentine empanadas from Casa de Loro are the move. If you miss them, you'll think about it.",
+      "parkingNote": "Street parking on 13th Ave S and Broad Ave. Gets tight after 9 AM — walk from 3rd Street if you can."
+    },
+    "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
+    "nearbyPassportStops": ["janes-cafe-on-3rd", "cove-inn-coffee-shoppe"],
+    "multiLayer": true,
+    "instagram": "thirdstreetsouthfarmersmarket",
+    "website": "thirdstreetsouth.com/the-third-street-south-farmers-market/",
+    "status": "confirmed-open",
+    "lastVerified": "2026-06-27"
   }
 ]

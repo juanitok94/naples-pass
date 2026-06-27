@@ -445,7 +445,7 @@ export default function StopPage({ params }: { params: Promise<{ slug: string }>
                              hover:bg-[#1a3560] transition-all text-center"
                 >
                   <p className="font-mono text-[9px] text-[#c9a060] opacity-70 uppercase">
-                    Walk to the pier
+                    Walk to the water →
                   </p>
                   <p className="font-serif text-xs font-bold text-[#f5f0e8] mt-0.5">
                     View Passport →
