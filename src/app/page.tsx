@@ -27,8 +27,10 @@ export default function Home() {
         <h2 className="font-serif text-4xl italic text-[#c9a060] leading-none mt-1">
           Florida
         </h2>
-        <p className="text-[#c9a060] text-sm italic mt-3 opacity-70">
-          Walk the corridor. End at the pier.
+        <p className="text-[#c9a060] text-sm italic mt-3 opacity-70 leading-relaxed max-w-xs mx-auto">
+          Naples without the pier wouldn&apos;t be Naples.
+          The sixth rebuild is in progress.
+          We&apos;ll walk the corridor in the meantime.
         </p>
         <div className="mt-6 max-w-sm mx-auto">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" preserveAspectRatio="xMidYMid meet" className="w-full">
@@ -72,10 +74,10 @@ export default function Home() {
           cafe, and a diner on the bay.
         </p>
         <p className="font-serif text-lg leading-relaxed text-[#0d1f3c] mt-4">
-          Start in the Design District. Weave south between the
-          two streets. Finish at the Cove Inn, then walk five
-          minutes to the end of the Naples Pier. You've earned
-          the sunset.
+          Start in the Design District. Weave south between the two streets.
+          Finish at the Cove Inn on Naples Bay. The pier is five minutes west —
+          currently being rebuilt for the sixth time since 1888. Walk to the
+          13th Avenue South beach end to see the progress. The sunset still shows up.
         </p>
 
         {/* CTA */}
@@ -98,6 +100,12 @@ export default function Home() {
         >
           Explore the Map
         </Link>
+
+        <p className="font-mono text-[10px] tracking-widest text-[#1a3560] opacity-40
+                      uppercase text-center mt-8">
+          Naples, FL · Est. 1885 · The pier has been rebuilt five times.
+          The sixth is underway.
+        </p>
       </div>
 
       {/* THE ROUTE */}
@@ -225,6 +233,9 @@ export default function Home() {
           </p>
           <p className="font-serif italic text-[#c9a060] text-xs opacity-60 mt-1">
             West Asheville, NC
+          </p>
+          <p className="font-serif italic text-[#c9a060] text-xs opacity-60 mt-1">
+            Simple tools for the shops and streets worth walking.
           </p>
           <a
             href="mailto:john@peachykeandev.com"

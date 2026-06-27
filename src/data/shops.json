@@ -431,14 +431,14 @@
     "selloColor": "#0d4a6b",
     "hygge": false,
     "stamp": {
-      "welcomeLine": "Cove Inn ⚓",
-      "subLine": "You made it to the bay. The Pier is five minutes away."
+      "welcomeLine": "You walked the corridor.",
+      "subLine": "Ten stops. Two streets. The pier is coming back. Walk to the water — the sunset is still there."
     },
     "story": {
-      "headline": "Old Florida, right at the water.",
-      "body": "The Cove Inn Coffee Shoppe has been serving classic American breakfast in the lobby of the Cove Inn on Naples Bay for as long as anyone can remember. The pancakes are famous. The marina views are free. This is where the walk ends — one final stamp, then you walk to the end of the pier and let the Gulf do the rest.",
-      "insiderTip": "Cash or check only — there's an ATM on site. Locals call it the best-kept hole-in-the-wall in town. Naples Pier is a 5-minute walk from here. Go. Stand at the end. Watch the pelicans. You've earned it.",
-      "parkingNote": "Cove Inn has guest parking. Street parking on Broad Ave S."
+      "headline": "The last stop before the water.",
+      "body": "The Cove Inn Coffee Shoppe is exactly what it looks like — a cash-only diner inside a small bayfront hotel, run by people who've been doing it the same way for decades. Order the Barge breakfast burrito. Sit by the window. Look at the bay. When you're done, walk west on Broad Avenue to 12th Avenue South. The Naples Pier has been there since 1888 and is being rebuilt right now — sixth time after Hurricane Ian. The construction fence is worth seeing. The beach at 13th Avenue South is open and the sunset is the same one it's always been.",
+      "insiderTip": "Cash or check only — ATM on site. Get here before 9 AM on weekends or you'll wait. The Barge breakfast burrito is the order.",
+      "parkingNote": "Street parking on Broad Ave S. Naples Bay is right across the street."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
     "nearbyPassportStops": ["janes-cafe-on-3rd"],
