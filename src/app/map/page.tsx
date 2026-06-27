@@ -146,11 +146,27 @@ export default function MapPage() {
           {/* The corridor */}
           <div className="relative h-[340px]">
 
-            {/* Road line */}
-            <div
-              className="absolute left-0 right-0 h-[3px] bg-[#1a3560]/20 rounded-full"
-              style={{ top: '50%', transform: 'translateY(-50%)' }}
-            />
+            {/* Route line segments — gold when both ends are stamped */}
+            {coreStops.slice(0, -1).map((shop, i) => {
+              const nextShop = coreStops[i + 1]
+              const x1 = stopToX(shop.passportStop, flipped)
+              const x2 = stopToX(nextShop.passportStop, flipped)
+              const bothStamped = !!stamps[shop.id] && !!stamps[nextShop.id]
+              return (
+                <div
+                  key={`seg-${i}`}
+                  className="absolute h-[3px] rounded-full"
+                  style={{
+                    left: `${Math.min(x1, x2)}%`,
+                    width: `${Math.abs(x2 - x1)}%`,
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    backgroundColor: bothStamped ? '#c9a060' : 'rgba(26,53,96,0.2)',
+                    transition: 'background-color 0.8s ease',
+                  }}
+                />
+              )
+            })}
 
             {/* Corridor crossing: 5th Ave → 3rd St */}
             <div

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import shopsData from '@/data/shops.json'
 import badgesData from '@/data/badges.json'
-import { getStamps, type StampRecord } from '@/lib/stamps'
+import { getStamps, getLastStampDate, type StampRecord } from '@/lib/stamps'
 import { usePhone } from '@/lib/usePhone'
 import { getProgress } from '@/lib/passportApi'
 
@@ -23,6 +23,8 @@ export default function PassportPage() {
   const { phone, loaded: phoneLoaded } = usePhone()
   const [stamps, setStamps] = useState<StampRecord>({})
   const [mounted, setMounted] = useState(false)
+  const [lastStampDate, setLastStampDate] = useState<string | null>(null)
+  const [completeDate, setCompleteDate] = useState<string | null>(null)
 
   useEffect(() => {
     if (!phoneLoaded) return
@@ -62,6 +64,21 @@ export default function PassportPage() {
     window.addEventListener('focus', sync)
     return () => window.removeEventListener('focus', sync)
   }, [phone, phoneLoaded])
+
+  useEffect(() => {
+    if (!mounted) return
+    setLastStampDate(getLastStampDate())
+    const coreCount = coreStops.filter(s => stamps[s.id]).length
+    if (coreCount === 10) {
+      if (!localStorage.getItem('walk-complete-date')) {
+        const date = new Date().toLocaleDateString('en-US', {
+          month: 'long', day: 'numeric', year: 'numeric',
+        })
+        localStorage.setItem('walk-complete-date', date)
+      }
+      setCompleteDate(localStorage.getItem('walk-complete-date'))
+    }
+  }, [stamps, mounted])
 
   const coreStamped = coreStops.filter(s => stamps[s.id]).length
   const progress = Math.round((coreStamped / 10) * 100)
@@ -141,6 +158,79 @@ export default function PassportPage() {
         <div className="max-w-lg mx-auto px-6 pt-3">
           <p className="font-serif text-sm italic text-[#1a3560] opacity-70">
             {nextBadge.threshold - coreStamped} more stamp{nextBadge.threshold - coreStamped !== 1 ? 's' : ''} to earn &ldquo;{nextBadge.label}&rdquo;
+          </p>
+        </div>
+      )}
+
+      {/* LAST STAMP DATE */}
+      {lastStampDate && coreStamped > 0 && (
+        <p className="font-mono text-[10px] tracking-widest text-[#1a3560]
+                      opacity-40 uppercase text-center mb-4">
+          Last stamped: {lastStampDate}
+        </p>
+      )}
+
+      {/* COMPLETION CERTIFICATE */}
+      {completeDate && (
+        <div className="mx-4 mb-6 bg-[#0d1f3c] border-t-4 border-[#c9a060]
+                        rounded-sm p-6 text-center">
+          <div className="max-w-[200px] mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100"
+                 className="w-full">
+              <circle cx="320" cy="36" r="22" fill="#c9a060" opacity="0.4"/>
+              <circle cx="320" cy="36" r="14" fill="#c9a060" opacity="0.6"/>
+              <g fill="#c9a060">
+                <rect x="20" y="56" width="320" height="3"/>
+                <rect x="285" y="52" width="50" height="7"/>
+                <rect x="295" y="38" width="30" height="14"/>
+                <polygon points="291,38 310,28 329,38"/>
+                <rect x="22" y="59" width="1.5" height="22"/>
+                <rect x="46" y="59" width="1.5" height="22"/>
+                <rect x="70" y="59" width="1.5" height="22"/>
+                <rect x="94" y="59" width="1.5" height="22"/>
+                <rect x="118" y="59" width="1.5" height="22"/>
+                <rect x="142" y="59" width="1.5" height="22"/>
+                <rect x="166" y="59" width="1.5" height="22"/>
+                <rect x="190" y="59" width="1.5" height="22"/>
+                <rect x="214" y="59" width="1.5" height="22"/>
+                <rect x="238" y="59" width="1.5" height="22"/>
+                <rect x="262" y="59" width="1.5" height="22"/>
+                <rect x="281" y="59" width="1.5" height="22"/>
+                <rect x="295" y="59" width="1.5" height="22"/>
+                <rect x="311" y="59" width="1.5" height="22"/>
+                <rect x="327" y="59" width="1.5" height="22"/>
+              </g>
+            </svg>
+          </div>
+
+          <p className="font-serif text-2xl font-bold text-[#f5f0e8] mt-2">
+            You walked the corridor.
+          </p>
+          <p className="font-mono text-[10px] tracking-widest text-[#c9a060]
+                        uppercase mt-2 opacity-70">
+            Ten stops · Two streets · Naples, Florida
+          </p>
+          <p className="font-mono text-[11px] text-[#c9a060] opacity-50 mt-3">
+            Walked on {completeDate}
+          </p>
+
+          <div className="grid grid-cols-2 gap-1 mt-4 text-left">
+            {coreStops.map(stop => (
+              <p key={stop.id}
+                 className="font-mono text-[9px] text-[#c9a060] opacity-60
+                            tracking-wide">
+                ✓ {stop.name}
+              </p>
+            ))}
+          </div>
+
+          <p className="font-mono text-[9px] text-[#c9a060] opacity-30
+                        tracking-widest uppercase mt-5">
+            #NaplesFlorida · naples-pass.vercel.app
+          </p>
+          <p className="font-mono text-[9px] text-[#c9a060] opacity-20
+                        tracking-widest uppercase mt-1">
+            Screenshot to share
           </p>
         </div>
       )}

@@ -5,7 +5,7 @@ import { useState, useEffect, use } from 'react'
 import Link from 'next/link'
 import shopsData from '@/data/shops.json'
 import triviaData from '@/data/trivia.json'
-import { getStamps, addStamp, type StampRecord } from '@/lib/stamps'
+import { getStamps, addStamp, recordStampDate, type StampRecord } from '@/lib/stamps'
 import { usePhone } from '@/lib/usePhone'
 import { getProgress } from '@/lib/passportApi'
 import PhoneModal from '@/components/PhoneModal'
@@ -91,6 +91,7 @@ export default function StopPage({ params }: { params: Promise<{ slug: string }>
   function handleStamp() {
     if (stamped) return
     const updated = addStamp(slug)
+    recordStampDate()
     setStamps(updated)
     setStamped(true)
     setJustStamped(true)

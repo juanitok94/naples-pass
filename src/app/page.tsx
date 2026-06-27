@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import shopsData from '@/data/shops.json'
+import TimeGreeting from '@/components/TimeGreeting'
+import SaturdayBanner from '@/components/SaturdayBanner'
 
 const shops = shopsData as any[]
 
@@ -18,9 +20,7 @@ export default function Home() {
 
       {/* HEADER */}
       <div className="bg-[#0d1f3c] px-6 py-10 text-center border-b-4 border-[#c9a060]">
-        <p className="text-[#c9a060] text-xs tracking-[0.3em] uppercase mb-2 font-mono">
-          A Walking Guide
-        </p>
+        <TimeGreeting />
         <h1 className="font-serif text-5xl font-black text-[#f5f0e8] leading-none">
           Naples,
         </h1>
@@ -64,6 +64,8 @@ export default function Home() {
           </svg>
         </div>
       </div>
+
+      <SaturdayBanner />
 
       {/* INTRO */}
       <div className="max-w-2xl mx-auto px-6 py-10">

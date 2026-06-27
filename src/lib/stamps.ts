@@ -43,3 +43,16 @@ export function isStamped(shopId: string): boolean {
 export function stampCount(): number {
   return Object.keys(getStamps()).length
 }
+
+export function recordStampDate(): void {
+  if (typeof window === 'undefined') return
+  const today = new Date().toLocaleDateString('en-US', {
+    month: 'long', day: 'numeric', year: 'numeric',
+  })
+  localStorage.setItem('last-stamp-date', today)
+}
+
+export function getLastStampDate(): string | null {
+  if (typeof window === 'undefined') return null
+  return localStorage.getItem('last-stamp-date')
+}
