@@ -200,21 +200,23 @@ export default function Home() {
             🕯 Hidden Collection
           </p>
           <p className="font-serif text-lg font-bold text-[#0d1f3c]">
-            The Quiet Five
+            The Quiet Six
           </p>
           <p className="font-serif italic text-sm text-[#1a3560] mt-1 leading-relaxed">
             Five stops where Old Naples slows all the way down.
-            Find all five.
+            Find all six.
           </p>
           <div className="flex flex-wrap mt-3" style={{ gap: '0.5rem' }}>
             {hyggeStops.map(shop => (
-              <span
+              <Link
                 key={shop.id}
-                className="inline-block text-xs font-mono px-2 py-1 rounded-sm text-white opacity-80"
+                href={`/stop/${shop.id}`}
+                className="inline-block text-xs font-mono px-2 py-1 rounded-sm
+                           text-white opacity-80 hover:opacity-100 transition-opacity"
                 style={{ backgroundColor: shop.selloColor }}
               >
                 {shop.name}
-              </span>
+              </Link>
             ))}
           </div>
         </div>
