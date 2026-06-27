@@ -32,9 +32,9 @@
     },
     "story": {
       "headline": "Dramatic from the moment you sit down.",
-      "body": "Forever Fiore is European in every sense — floral, unhurried, a little theatrical. The tea selection alone takes five minutes to read. Order something you've never heard of and take your time with it. This is your warm-up for the corridor ahead.",
-      "insiderTip": "Closed Monday and Saturday — plan around it. Sunday brunch here before the walk is the move.",
-      "parkingNote": "Naples Design District has street parking on 10th Street N."
+      "body": "Forever Fiore is floral, unhurried, a little theatrical. The tea menu alone takes five minutes to read. Order something you have never heard of. The preserved florals around you last three to five years — the owner designed the space to feel timeless, and it does. Good place to start a long morning.",
+      "insiderTip": "Closed Monday and Saturday. Sunday brunch here before the walk is the move.",
+      "parkingNote": "Street parking on 10th Street N in the Design District."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
     "nearbyPassportStops": ["brambles-english-tea-room"],
@@ -77,9 +77,9 @@
     },
     "story": {
       "headline": "You have to know it's there.",
-      "body": "Brambles is tucked in an alleyway off 5th Avenue — no signage visible from the street, no neon, no line. Inside: 75 teas, scratch scones with clotted cream, shrimp Davina on a fresh-baked croissant. It's been here longer than most of the boutiques surrounding it.",
-      "insiderTip": "Order the Brambles Delight — tea sandwiches, scones with clotted cream and strawberry preserves, delicate pastries, pot of your choice. It's the whole point.",
-      "parkingNote": "5th Avenue South public parking garage nearby on 8th St S."
+      "body": "Brambles is off 5th Avenue with no visible signage from the street. Inside: 75 teas, scratch scones with clotted cream, shrimp Davina on a fresh-baked croissant. It has been here longer than most of the boutiques surrounding it. The kind of place that rewards the people who find it.",
+      "insiderTip": "Order the Brambles Delight. Tea sandwiches, scones with clotted cream and strawberry preserves, delicate pastries, pot of your choice. That is the whole point.",
+      "parkingNote": "5th Avenue South public parking garage on 8th St S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
     "nearbyPassportStops": ["fifth-avenue-coffee-company", "the-brick-coffee-bar"],
@@ -122,8 +122,8 @@
     },
     "story": {
       "headline": "The anchor of 5th Avenue South.",
-      "body": "This is the one everyone knows. Corner location, full diner menu, coffee from early morning — 5th Avenue Coffee Company has been the gathering point of Old Naples longer than most businesses on this block. The milkshakes are not a joke. Neither is the breakfast.",
-      "insiderTip": "Go early. The corner patio is peak people-watching before the 5th Ave shopping crowd arrives.",
+      "body": "Corner location, full diner menu, coffee from early morning. 5th Avenue Coffee Company has been the gathering point of this block longer than most businesses here. The milkshakes are not a joke. Neither is the breakfast. Go early before the shopping crowd arrives and the patio fills up.",
+      "insiderTip": "The corner patio is peak people-watching before 10 AM. After that it gets busy.",
       "parkingNote": "5th Avenue South public parking garage on 8th St S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
@@ -167,8 +167,8 @@
     },
     "story": {
       "headline": "The one that stays open.",
-      "body": "Brick-lined walls, living room furniture, a patio that faces the full sweep of 5th Avenue. The Brick serves Lavazza coffee in the morning and pivots to beer and wine by afternoon without missing a beat. It's the stop where you sit down for a cortado and realize an hour has passed.",
-      "insiderTip": "Prime location for 5th Avenue Art Walk events — check the calendar before you go.",
+      "body": "Brick walls, living room furniture, a patio facing the full sweep of 5th Avenue. The Brick serves Lavazza coffee in the morning and pivots to beer and wine by afternoon. It is the stop where you sit down for a cortado and look up to find an hour gone. Prime location for 5th Avenue Art Walk nights if the timing works out.",
+      "insiderTip": "Check the 5th Avenue Art Walk calendar before you go. The patio on event nights is worth the detour.",
       "parkingNote": "5th Avenue South public parking garage on 8th St S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
@@ -212,8 +212,8 @@
     },
     "story": {
       "headline": "The newcomer that already belongs.",
-      "body": "Bontà opened in 2024 and arrived fully formed — traditional Italian bakery, 900 square feet, overlooking 5th Avenue. The gelato is serious. The paninis are serious. The pastries are the kind you photograph before you eat, then wish you'd ordered two.",
-      "insiderTip": "Get the gelato. Don't skip it because you think you're here for coffee. Get the gelato.",
+      "body": "Bonta opened in 2024 and came ready. Traditional Italian bakery, 900 square feet, overlooking 5th Avenue. The gelato is serious. The paninis are serious. The pastries are the kind you order two of, because you will wish you had. It fits the block like it has always been here.",
+      "insiderTip": "Get the gelato. Do not skip it because you think you are here for coffee. Get the gelato.",
       "parkingNote": "5th Avenue South public parking garage on 8th St S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
@@ -256,8 +256,8 @@
     },
     "story": {
       "headline": "Bright food, bright morning.",
-      "body": "The Cafe has Scandinavian roots — the kind of place that values good ingredients over complicated preparation. Sit on the corner patio at 8th and Fifth and watch Naples wake up. Healthy bowls, smoked salmon plates, pastries worth skipping the next stop for. It's been ranked among the top 20 restaurants in Naples on TripAdvisor for years, which locals already knew. This is your turn-the-corner stop — the last breath of 5th before you cross to 3rd Street South.",
-      "insiderTip": "Order the Blue Boost — matcha, butterfly pea, vanilla, lavender, oat milk. The drink locals keep off Instagram.",
+      "body": "The Cafe has Scandinavian roots and shows it. Good ingredients, simple preparation, no fuss. Sit on the corner patio at 8th and Fifth and watch Naples wake up. Healthy bowls, smoked salmon plates, pastries that locals have been coming back for since 2013. This is your turn-the-corner stop. Last coffee on 5th before you head to 3rd Street South.",
+      "insiderTip": "Order the Blue Boost. Matcha, butterfly pea, vanilla, lavender, oat milk. The drink locals keep off Instagram.",
       "parkingNote": "Street parking on 5th; free public garage two blocks east on 6th St S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
@@ -301,7 +301,7 @@
     },
     "story": {
       "headline": "Old Naples doesn't get more Old Naples than this.",
-      "body": "Tony's has been here since 1995 — wine bar, artisan bakery, coffee bar, gourmet market, all wrapped around a courtyard with a fountain. The pastries are made from scratch every morning. The coffee is always perfection. The space feels like it's been broken in perfectly over 30 years.",
+      "body": "Tony's has been here since 1995. Wine bar, artisan bakery, coffee bar, gourmet market, all around a courtyard with a fountain. The pastries are made from scratch every morning. The coffee is always right. Thirty years on 3rd Street and the place still feels like it is exactly where it belongs.",
       "insiderTip": "The croissants are gone by mid-morning. Go early or go without.",
       "parkingNote": "3rd Street South has metered street parking. Cambier Park lot nearby."
     },
@@ -346,8 +346,8 @@
     },
     "story": {
       "headline": "Naples needed this. Naples got it.",
-      "body": "Books on Third opened in October 2025 as the first independent bookstore Naples had seen in recent memory — 2,961 square feet, 16,000 books, reading nooks, a children's cove, gifts that pair with what you just bought. It's upstairs from Ridgway Bar & Grill, which means the building has been a cultural anchor for decades. The bookstore just made it complete.",
-      "insiderTip": "The children's cove is genuinely great. If you're traveling with kids, this earns you the most goodwill of any stop.",
+      "body": "Books on Third opened in October 2025 as the first independent bookstore Naples had seen in years. 2,961 square feet, 16,000 books, reading nooks, a children's cove, gifts that pair with what you just bought. It sits upstairs from Ridgway Bar and Grill, which means the building has been a cultural anchor for decades. The bookstore made it complete.",
+      "insiderTip": "The children's cove is genuinely great. Traveling with kids, this is the stop that earns you the most goodwill.",
       "parkingNote": "3rd Street South metered parking. Cambier Park lot is closest."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
@@ -391,8 +391,8 @@
     },
     "story": {
       "headline": "Garden vibes, award-winning brunch, zero pretense.",
-      "body": "Jane's has won Reader's Choice Best Brunch for nearly a decade running. The menu is organic and British-American, the seating is 90% open-air, and the atmosphere does something that's hard to fake — it makes you feel genuinely welcome. A coffee here in the shade of a Naples morning is the right pace for this stretch of the walk.",
-      "insiderTip": "The organic menu changes seasonally. Ask what's new — they're usually excited to tell you.",
+      "body": "Jane's has won Reader's Choice Best Brunch for nearly a decade. The menu is organic and British-American, the seating is 90% open-air, and the place makes you feel welcome without trying to. A coffee here in the shade of a Naples morning is the right pace for this part of the walk. The organic menu changes seasonally.",
+      "insiderTip": "Ask what is new on the menu. They are usually excited to tell you.",
       "parkingNote": "3rd Street South metered parking. Cambier Park lot nearby."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },

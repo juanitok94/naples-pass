@@ -1,100 +1,72 @@
 [
   {
-    "shopId": "cooperative-coffee-roasters",
-    "question": "Cooperative roasts their own beans in-house. What are the names of their two signature roast lines?",
-    "answer": "Gravity and Levity — two named roasts that regulars request by name. The names say everything about how they think about coffee.",
+    "shopId": "forever-fiore",
+    "question": "Forever Fiore uses preserved florals that last three to five years. What process makes cut flowers last that long without drying out?",
+    "answer": "Preserved florals are treated with a glycerin-based solution that replaces the water in the plant cells, keeping them soft and flexible indefinitely. No water, no light required. The petals hold their color and texture for years. Forever Fiore built an entire design philosophy around it.",
+    "difficulty": "curious",
+    "category": "culture"
+  },
+  {
+    "shopId": "brambles-english-tea-room",
+    "question": "Brambles serves traditional English high tea. The term 'high tea' is widely misunderstood. What does 'high' actually refer to?",
+    "answer": "The height of the table. High tea was originally a working-class evening meal eaten at a high dining table, not the fancy afternoon service it is associated with today. Afternoon tea, served at low parlor tables, was the upper-class tradition. Brambles serves the latter. The names got swapped somewhere along the way.",
+    "difficulty": "visitor",
+    "category": "history"
+  },
+  {
+    "shopId": "fifth-avenue-coffee-company",
+    "question": "5th Avenue South was developed as a commercial corridor in the early 1900s. The street was named to mirror a famous avenue in which American city?",
+    "answer": "New York City. Naples was developed by Walter Haldeman and his partners with ambitions to create a refined Southern resort town. Naming the main street after Manhattan's most prestigious boulevard was deliberate. The parallel held up better than most civic aspirations do.",
     "difficulty": "local",
+    "category": "history"
+  },
+  {
+    "shopId": "the-brick-coffee-bar",
+    "question": "The Brick serves Lavazza coffee. Lavazza is Italy's largest coffee company. In what Italian city was it founded, and in what year?",
+    "answer": "Turin, 1895. Luigi Lavazza opened a grocery shop and began blending different coffees to create consistent flavor profiles regardless of origin or harvest variation. The blending approach became Lavazza's signature and is now standard practice across commercial espresso. They have been doing it for 130 years.",
+    "difficulty": "curious",
     "category": "coffee-culture"
   },
   {
-    "shopId": "battlecat-coffee-bar",
-    "question": "BattleCat is known for a savory pastry that's technically a Czech-Texan street food. What is it, and what's the best flavor?",
-    "answer": "Kolaches — doughy pastries filled with sausage, cheese, or jalapeño. The jalapeño is the answer, but it sells out by 9am on weekends.",
-    "difficulty": "visitor",
-    "category": "food"
-  },
-  {
-    "shopId": "asheville-kava-coffee",
-    "question": "Kava X Coffee serves kava alongside espresso. Kava is a traditional calming beverage from which part of the world?",
-    "answer": "The Pacific Islands — particularly Fiji, Vanuatu, and Tonga. Made from the root of the pepper plant, kava is used socially and ceremonially for its calming effects.",
+    "shopId": "bonta-bakery",
+    "question": "Bonta is an Italian word. What does it mean, and how does the name reflect what the bakery is trying to do?",
+    "answer": "Bonta means goodness in Italian, with connotations of kindness and wholesomeness. In Italian food culture it implies simplicity done right rather than complexity done impressively. A bakery named Bonta is making a claim about priorities. The gelato backs it up.",
     "difficulty": "visitor",
     "category": "culture"
   },
   {
-    "shopId": "haywood-famous",
-    "question": "Haywood Famous specializes in Cuban coffee. What's the difference between a cortadito and a café con leche?",
-    "answer": "A cortadito is espresso cut with a small amount of steamed milk — bold and strong. A café con leche is espresso with roughly equal parts steamed milk — much creamier and milder. Eva's version of both is the real thing.",
-    "difficulty": "visitor",
-    "category": "coffee-culture"
-  },
-  {
-    "shopId": "deep-time-coffee",
-    "question": "Deep Time Coffee takes its name from a geological concept. What does 'deep time' actually mean in geology, and approximately how old is the Earth?",
-    "answer": "Deep time refers to the vast timescales of Earth's history — the planet is approximately 4.5 billion years old. The concept was developed by geologist James Hutton in the 18th century. Quite a name for a coffee shop that makes every cup feel unhurried.",
+    "shopId": "the-cafe",
+    "question": "The Cafe has Scandinavian roots. Scandinavian cafe culture is built around a concept called fika. What is fika, and how is it different from a coffee break?",
+    "answer": "Fika is a Swedish word for a deliberate pause in the day taken with coffee and something to eat, usually with other people. It is not a quick break. It is a scheduled interruption, a cultural institution. Swedes take fika seriously enough that skipping it is considered slightly rude. The Cafe runs on that philosophy.",
     "difficulty": "curious",
-    "category": "history"
+    "category": "culture"
   },
   {
-    "shopId": "bad-manners-coffee",
-    "question": "Bad Manners sources their coffee from Tandem Coffee Roasters. Where is Tandem based, and what makes their roasting style distinctive?",
-    "answer": "Tandem is based in Portland, Maine — one of the country's most respected specialty roasters. They're known for bright, clean roasts that highlight origin character rather than roasting flavor. Maine quietly punches above its weight in specialty coffee.",
-    "difficulty": "curious",
-    "category": "coffee-culture"
-  },
-  {
-    "shopId": "rowan-coffee",
-    "question": "Rowan serves oysters on Friday afternoons. The classic wine pairing for oysters is a crisp white from which French region?",
-    "answer": "Muscadet from the Loire Valley is the classic match — high acid, mineral, and bone dry. Chablis works too. Both cut through the brine without overwhelming it. Rowan probably has a perfect pairing already selected.",
-    "difficulty": "curious",
-    "category": "food-and-drink"
-  },
-  {
-    "shopId": "odds-cafe",
-    "question": "Odd's signature Aztec mocha gets its kick from a spice the ancient Aztecs combined with chocolate. What spice, and what did they call the original drink?",
-    "answer": "Chili pepper — capsaicin. The Aztecs called their ceremonial cacao and chili drink xocolatl. It was bitter, spicy, and nothing like modern hot chocolate. Odd's Aztec mocha carries that tradition into a latte.",
-    "difficulty": "visitor",
-    "category": "history"
-  },
-  {
-    "shopId": "plant-bar",
-    "question": "Plant Bar serves drinks featuring Blue Lotus. Blue lotus was a sacred plant in which ancient civilization, and what was it used for?",
-    "answer": "Ancient Egypt — Nymphaea caerulea (blue lotus) appears throughout Egyptian art and hieroglyphics. It was associated with the sun god Ra and used in ceremonial contexts for its mildly euphoric and calming properties. The Egyptians were ahead of the wellness trend by about 3,000 years.",
-    "difficulty": "curious",
-    "category": "history"
-  },
-  {
-    "shopId": "izzys-coffee-house",
-    "question": "Izzy's sits at the far west end of Haywood Road. The road itself is named after its western destination — what county does Haywood Road lead to?",
-    "answer": "Haywood County — the road was originally the Western Turnpike from Asheville toward Waynesville in Haywood County. That's where the name comes from. West Asheville was built along a road named for somewhere further west, which feels right.",
+    "shopId": "tonys-off-third",
+    "question": "Tony's Off Third has been on 3rd Street South since 1995. The street itself has a different character from 5th Avenue South. What accounts for the difference in feel between the two corridors?",
+    "answer": "3rd Street South was developed as a boutique residential shopping street in the 1970s and 1980s, with a deliberate emphasis on small independent businesses, courtyards, and greenery. 5th Avenue South was the older commercial main street, developed earlier and with a broader mix of uses. The two corridors evolved differently and the difference is still visible. Tony's is a product of the 3rd Street tradition.",
     "difficulty": "local",
     "category": "history"
   },
   {
-    "shopId": "owl-bakery",
-    "question": "OWL Bakery's cardamom bun has been described as a cinnamon roll and a croissant having a very good idea together. What technique makes a croissant's layers possible?",
-    "answer": "Lamination — repeatedly folding cold butter into dough to create hundreds of distinct layers. The process takes days and requires careful temperature control. When done well, the layers shatter and melt simultaneously. OWL does it well.",
+    "shopId": "books-on-third",
+    "question": "Books on Third opened in October 2025 as Naples' first independent bookstore in years. Indie bookstores nearly disappeared in the 2010s. What reversed the trend?",
+    "answer": "Several things converged. Amazon's dominance plateaued. The pandemic drove people toward local businesses and physical books. The BookTok phenomenon on TikTok created a new generation of enthusiastic readers who preferred to browse in person. Independent bookstore openings outpaced closures in the US for four consecutive years from 2021 to 2024. Naples waited longer than most cities its size. Books on Third arrived into a market that was ready.",
+    "difficulty": "curious",
+    "category": "culture"
+  },
+  {
+    "shopId": "janes-cafe-on-3rd",
+    "question": "Jane's menu is described as British-American and organic. British food has a poor international reputation, but British cafe culture contributed one thing to American breakfast menus. What is it?",
+    "answer": "The full cooked breakfast. Eggs, bacon, sausage, toast, beans, mushrooms, tomato all on one plate, eaten at a table with coffee. Americans shortened and adapted it, but the idea of a substantial morning meal taken sitting down rather than on the go is a British contribution. Jane's version leans into the garden setting and organic sourcing. The bones are older than Naples itself.",
     "difficulty": "curious",
     "category": "food"
   },
   {
-    "shopId": "flora-forage",
-    "question": "Forage at Flora serves Tulsi Rose tea as a signature drink. Tulsi is also known as Holy Basil — where does it originate and what is it traditionally used for?",
-    "answer": "Tulsi originates in the Indian subcontinent and has been used in Ayurvedic medicine for over 3,000 years. It's considered an adaptogen — believed to help the body manage stress. The combination with rose makes for a floral, calming drink that's unlike anything else on Haywood Road.",
-    "difficulty": "curious",
+    "shopId": "cove-inn-coffee-shoppe",
+    "question": "The Cove Inn has been on Naples Bay for decades. Naples Bay itself connects to the Gulf of Mexico through Gordon Pass. What kind of marine life regularly passes through Naples Bay?",
+    "answer": "Bottlenose dolphins, manatees, snook, redfish, and tarpon are all common in Naples Bay. The bay is relatively shallow and calm, making it ideal nursery habitat. Dolphins are frequently spotted from the Cove Inn waterfront, especially in the morning. The Pier drew people to the Gulf side. The Bay side draws the locals.",
+    "difficulty": "visitor",
     "category": "culture"
-  },
-  {
-    "shopId": "firestorm-books-coffee",
-    "question": "Firestorm Books & Coffee is worker-owned and describes itself as an anti-capitalist business. What formal decision-making process does the collective use internally?",
-    "answer": "Formal consensus — a process where decisions require agreement from all participants rather than majority vote. Each member has equal voice and veto power. It's slower than voting but produces decisions the whole group can commit to. Firestorm has run this way since 2008.",
-    "difficulty": "local",
-    "category": "culture"
-  },
-  {
-    "shopId": "mocha-box-coffee",
-    "question": "Mocha Box specializes in Yemeni coffee culture. Yemen is considered the birthplace of coffee cultivation — approximately when did coffee drinking as a practice begin there?",
-    "answer": "Around the 15th century in the Sufi monasteries of Yemen — monks used coffee to stay awake for nighttime prayer. The port city of Mocha (Al-Mukha) gave its name to the mocha coffee drink and was the world's primary coffee export hub for centuries. Mocha Box carries that history.",
-    "difficulty": "curious",
-    "category": "history"
   }
 ]
