@@ -205,7 +205,7 @@ export default function Home() {
             The Quiet Six
           </p>
           <p className="font-serif italic text-sm text-[#1a3560] mt-1 leading-relaxed">
-            Five stops where Old Naples slows all the way down.
+            Six stops where Old Naples slows all the way down.
             Find all six.
           </p>
           <div className="flex flex-wrap mt-3" style={{ gap: '0.5rem' }}>
