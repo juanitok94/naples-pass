@@ -1,50 +1,5 @@
 [
   {
-    "id": "forever-fiore",
-    "name": "Forever Fiore Tea Lounge",
-    "address": "970 5th Ave N",
-    "city": "Naples",
-    "state": "FL",
-    "zip": "34102",
-    "coordinates": [-81.7952549, 26.1526743],
-    "layers": ["tea"],
-    "zone": "design",
-    "rating": 4.5,
-    "reviewCount": 83,
-    "hours": {
-      "mon": "Closed",
-      "tue": "9:30AM–3PM",
-      "wed": "9:30AM–3PM",
-      "thu": "9:30AM–3PM",
-      "fri": "9:30AM–3PM",
-      "sat": "Closed",
-      "sun": "9:30AM–3PM",
-      "note": "Brunch hours only — plan accordingly"
-    },
-    "passportStop": 1,
-    "passportType": "core",
-    "streetSide": "north",
-    "selloColor": "#7c3f8a",
-    "hygge": true,
-    "stamp": {
-      "welcomeLine": "Forever Fiore ✦",
-      "subLine": "The Design District. Where the walk begins."
-    },
-    "story": {
-      "headline": "Dramatic from the moment you sit down.",
-      "body": "Forever Fiore is floral, unhurried, a little theatrical. The tea menu alone takes five minutes to read. Order something you have never heard of. The preserved florals around you last three to five years — the owner designed the space to feel timeless, and it does. Good place to start a long morning.",
-      "insiderTip": "Closed Monday and Saturday. Sunday brunch here before the walk is the move.",
-      "parkingNote": "Street parking on 10th Street N in the Design District."
-    },
-    "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
-    "nearbyPassportStops": ["brambles-english-tea-room"],
-    "multiLayer": false,
-    "instagram": "foreverfioreteahouse",
-    "website": "foreverfioretealounge.com",
-    "status": "confirmed-open",
-    "lastVerified": "2026-06-26"
-  },
-  {
     "id": "brambles-english-tea-room",
     "name": "Brambles English Tea Room",
     "address": "340 5th Ave S",
@@ -66,7 +21,7 @@
       "sun": "Closed",
       "note": "Afternoon only — not an all-day café"
     },
-    "passportStop": 2,
+    "passportStop": 1,
     "passportType": "core",
     "streetSide": "south",
     "selloColor": "#c9a060",
@@ -111,7 +66,7 @@
       "sun": "7AM–5PM",
       "note": "Open early — best before the boutiques open"
     },
-    "passportStop": 3,
+    "passportStop": 2,
     "passportType": "core",
     "streetSide": "south",
     "selloColor": "#0d1f3c",
@@ -127,7 +82,7 @@
       "parkingNote": "5th Avenue South public parking garage on 8th St S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
-    "nearbyPassportStops": ["the-brick-coffee-bar", "brambles-english-tea-room"],
+    "nearbyPassportStops": ["brambles-english-tea-room", "the-brick-coffee-bar"],
     "multiLayer": false,
     "instagram": "",
     "website": "5thavncoffeeco.com",
@@ -156,7 +111,7 @@
       "sun": "8AM–10PM",
       "note": "Open latest on 5th — coffee to wine without moving"
     },
-    "passportStop": 4,
+    "passportStop": 3,
     "passportType": "core",
     "streetSide": "south",
     "selloColor": "#8b6914",
@@ -201,7 +156,7 @@
       "sun": "8AM–6PM",
       "note": "Opened 2024 — address confirmed 824 5th Ave S #2"
     },
-    "passportStop": 5,
+    "passportStop": 4,
     "passportType": "core",
     "streetSide": "south",
     "selloColor": "#b5451b",
@@ -245,7 +200,7 @@
       "sat": "8AM–3PM",
       "sun": "8AM–3PM"
     },
-    "passportStop": 6,
+    "passportStop": 5,
     "passportType": "core",
     "streetSide": "south",
     "selloColor": "#c9a060",
@@ -261,12 +216,56 @@
       "parkingNote": "Street parking on 5th; free public garage two blocks east on 6th St S."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
-    "nearbyPassportStops": ["bonta-bakery", "tonys-off-third"],
+    "nearbyPassportStops": ["bonta-bakery", "bad-ass-coffee"],
     "multiLayer": false,
     "instagram": "thecafeon5th",
     "website": "www.thecafeon5th.com",
     "status": "confirmed-open",
     "lastVerified": "2026-06-26"
+  },
+  {
+    "id": "bad-ass-coffee",
+    "name": "Bad Ass Coffee of Hawaii",
+    "address": "1307 3rd St S",
+    "city": "Naples",
+    "state": "FL",
+    "zip": "34102",
+    "phone": "(239) 748-1401",
+    "coordinates": [-81.7946, 26.1365],
+    "layers": ["coffee"],
+    "zone": "third",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "hours": {
+      "mon": "6:00 AM – 8:00 PM",
+      "tue": "6:00 AM – 8:00 PM",
+      "wed": "6:00 AM – 8:00 PM",
+      "thu": "6:00 AM – 8:00 PM",
+      "fri": "6:00 AM – 8:00 PM",
+      "sat": "6:00 AM – 8:00 PM",
+      "sun": "6:00 AM – 8:00 PM"
+    },
+    "passportStop": 6,
+    "passportType": "core",
+    "streetSide": "west",
+    "selloColor": "#c9a060",
+    "hygge": false,
+    "stamp": {
+      "welcomeLine": "You found the Bad Ass.",
+      "subLine": "First stamp on 3rd. Hawaiian coffee, Florida sunshine."
+    },
+    "story": {
+      "headline": "Aloha on Third Street.",
+      "body": "Bad Ass Coffee of Hawaii has been on 3rd Street South since before most of the boutiques arrived. Born on the Big Island in 1989, named after the donkeys that hauled Kona beans up the mountain. The Naples location is locally owned, opens at 6 AM — earliest on the corridor — and draws the kind of morning regulars who know each other's orders. Dog-friendly patio. Hawaiian blends. A locals-first start to the 3rd Street stretch.",
+      "insiderTip": "The 100% Kona is worth the upgrade. Ask for it iced with coconut milk — unofficial local order."
+    },
+    "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
+    "nearbyPassportStops": ["the-cafe", "tonys-off-third"],
+    "multiLayer": false,
+    "instagram": "",
+    "website": "",
+    "status": "confirmed-open",
+    "lastVerified": "2026-06-27"
   },
   {
     "id": "tonys-off-third",
@@ -306,7 +305,7 @@
       "parkingNote": "3rd Street South has metered street parking. Cambier Park lot nearby."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
-    "nearbyPassportStops": ["books-on-third", "janes-cafe-on-3rd"],
+    "nearbyPassportStops": ["bad-ass-coffee", "books-on-third"],
     "multiLayer": true,
     "instagram": "tonysoffthird",
     "website": "tonysoffthird.com",
@@ -447,44 +446,5 @@
     "website": "coveinnnaples.com",
     "status": "confirmed-open",
     "lastVerified": "2026-06-26"
-  },
-  {
-    "id": "third-street-farmers-market",
-    "name": "Third Street South Farmers Market",
-    "address": "245 13th Ave S",
-    "city": "Naples",
-    "state": "FL",
-    "zip": "34102",
-    "coordinates": [-81.8017708, 26.1311664],
-    "layers": ["coffee", "bakery"],
-    "zone": "third",
-    "rating": 0,
-    "reviewCount": 0,
-    "hours": {
-      "mon": "Closed",
-      "tue": "Closed",
-      "wed": "Closed",
-      "thu": "Closed",
-      "fri": "Closed",
-      "sat": "7:30AM–11:30AM",
-      "sun": "Closed",
-      "note": "Saturday only, 7:30–11:30 AM year-round. One exception per year for Naples St. Patrick's Day parade."
-    },
-    "passportType": "bonus",
-    "selloColor": "#1a3560",
-    "hygge": false,
-    "story": {
-      "headline": "Saturday morning, the way it's supposed to be.",
-      "body": "Since 1994, the Third Street South Farmers Market has taken over the parking lot behind Tommy Bahama every Saturday morning. Nearly 60 vendors — fresh produce, Colombian arepas, mushrooms, pastries, fresh-roasted coffee, cut flowers, and more. The market draws locals who have been coming for thirty years and visitors who stumble in and never leave. Live music, dogs everywhere, the full Naples Saturday energy. Opens at 7:30 — get there early.",
-      "insiderTip": "The Argentine empanadas from Casa de Loro are the move. If you miss them, you'll think about it.",
-      "parkingNote": "Street parking on 13th Ave S and Broad Ave. Gets tight after 9 AM — walk from 3rd Street if you can."
-    },
-    "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
-    "nearbyPassportStops": ["janes-cafe-on-3rd", "cove-inn-coffee-shoppe"],
-    "multiLayer": true,
-    "instagram": "thirdstreetsouthfarmersmarket",
-    "website": "thirdstreetsouth.com/the-third-street-south-farmers-market/",
-    "status": "confirmed-open",
-    "lastVerified": "2026-06-27"
   }
 ]

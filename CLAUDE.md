@@ -68,8 +68,9 @@ No test suite exists. Manual review at localhost:3000 is the test process.
    featured, not marketed at.
 
 ## Journey Direction
-North to south — Design District (Forever Fiore) to
-Naples Bay (Cove Inn), then walk to Naples Pier.
+5th Avenue first (west end at Brambles, east to The Cafe),
+then cross to 3rd Street South (Bad Ass Coffee through Jane's),
+then south to Naples Bay (Cove Inn). Walk to the pier after.
 The Pier is NOT a stamp stop — it is the destination.
 Completion screen fires at stop 10 with copy:
 "You walked the corridor. Now walk to the end of the pier.
@@ -80,15 +81,15 @@ Symbol of Naples. Built 1888. Pelicans on the pilings.
 The pier silhouette is the passport's visual hero mark.
 5-minute walk from Cove Inn (stop 10).
 
-## The 10 Core Stops (north to south)
+## The 10 Core Stops (5th Ave west→east, then 3rd St, then bay)
 | # | Shop | Zone | Address |
 |---|------|------|---------|
-| 1 | Forever Fiore Tea Lounge | design | 970 5th Ave N |
-| 2 | Brambles English Tea Room | fifth | 340 5th Ave S |
-| 3 | 5th Avenue Coffee Company | fifth | 599 5th Ave S |
-| 4 | The Brick Coffee & Bar | fifth | 531 5th Ave S |
-| 5 | Bontà Bakery | fifth | 824 5th Ave S #2 |
-| 6 | The Cafe | fifth | 821 5th Ave S |
+| 1 | Brambles English Tea Room | fifth | 340 5th Ave S |
+| 2 | 5th Avenue Coffee Company | fifth | 599 5th Ave S |
+| 3 | The Brick Coffee & Bar | fifth | 531 5th Ave S |
+| 4 | Bontà Bakery | fifth | 824 5th Ave S #2 |
+| 5 | The Cafe | fifth | 821 5th Ave S |
+| 6 | Bad Ass Coffee of Hawaii | third | 1307 3rd St S |
 | 7 | Tony's Off Third | third | 1300 3rd St S |
 | 8 | Books on Third | third | 1300 3rd St S Suite 201 |
 | 9 | Jane's Cafe on 3rd | third | 1209 3rd St S |
@@ -210,3 +211,4 @@ Format: [date] - what failed - why - what to do instead.
 - 2026-06-26 - Revision 2.2: Five surgical fixes. Cove Inn "Walk to the pier" nav link → "Walk to the water". Cove Inn hours note pier reference removed. Site metadata updated from "Old Naples Passport" to "Naples, Florida — A Walking Guide". Third Street South Farmers Market added as bonus stop (Saturday only, 7:30–11:30 AM, 60 vendors, since 1994). The Cafe updated with website, Instagram, Scandinavian-roots story detail, TripAdvisor credibility line. Note: website values stored without https:// protocol — stop page template-strings it on; brief-supplied full URLs were stripped to avoid double-protocol.
 - 2026-06-26 - Revision 2.1: Discovered Naples Pier is fully closed — Hurricane Ian (Sept 2022) damage, rebuild groundbreaking Jan 2026, estimated completion Nov 2026. Updated all pier-ending copy to acknowledge the rebuild honestly rather than promise a walk that isn't available. Tagline rewritten ("Naples without the pier wouldn't be Naples. The sixth rebuild is in progress. We'll walk the corridor in the meantime."). Cove Inn story updated with redirect to 13th Ave S beach end + construction note. Stamp 10 completion message updated. Founder note description polished to "streets worth walking." Naples Est. 1885 history line added to intro.
 - 2026-06-27 - Revision 3A: Five delight features (commit 356b188). Time-of-day greeting (Good morning/afternoon/evening, Naples) as 'use client' component replacing static eyebrow. Saturday farmers market banner — appears only Saturday before 11:30 AM, client component returns null otherwise. Last-stamped date written to localStorage on each stamp (recordStampDate in stamps.ts), shown on passport page when stampCount > 0. Gold route line segments on map — 9 individual divs replace single line, each fills gold when both neighboring stops are stamped (0.8s transition). Completion certificate on passport page when all 10 stamped — pier SVG, completion date stored in walk-complete-date localStorage key, all 10 stop names, share prompt. Existing COMPOSTELA block preserved below stamp grid.
+- 2026-06-27 - Revision 2.2 (stop swap + route reorder): Forever Fiore removed — no answer on phone verification calls. Replaced with Bad Ass Coffee of Hawaii (1307 3rd St S) per local recommendation from Ariana at Brambles. Route reordered: passport now runs 5th Avenue first (Brambles→The Cafe, stops 1–5) then crosses to 3rd Street South (Bad Ass Coffee→Jane's, stops 6–9) then bay finish (Cove Inn, stop 10). Brambles is now stop 1. OG image was already code-based (fixed in Rev 2.3) — no change needed. trivia.json: forever-fiore entry replaced with bad-ass-coffee Kona coffee question. nearbyPassportStops updated throughout to reflect new adjacency. Future dining layer candidates from Ariana: Del Mar (494 5th Ave S), Osteria Tulia (466 5th Ave S), Ocean Prime (699 5th Ave S), La Trattoria (878 5th Ave S), Gelato&Co (483 5th Ave S Unit 2), 3rd Street Farmers Market (Saturdays 7:30–11:30 AM).

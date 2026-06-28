@@ -1,10 +1,10 @@
 [
   {
-    "shopId": "forever-fiore",
-    "question": "Forever Fiore uses preserved florals that last three to five years. What process makes cut flowers last that long without drying out?",
-    "answer": "Preserved florals are treated with a glycerin-based solution that replaces the water in the plant cells, keeping them soft and flexible indefinitely. No water, no light required. The petals hold their color and texture for years. Forever Fiore built an entire design philosophy around it.",
+    "shopId": "bad-ass-coffee",
+    "question": "Bad Ass Coffee was named after the donkeys that hauled Kona coffee beans up the volcanic slopes of the Big Island. What makes Kona coffee so valuable that it was worth hauling by donkey?",
+    "answer": "Kona coffee grows only in a narrow belt on the slopes of Mauna Loa and Hualalai on Hawaii's Big Island — roughly 30 miles long and 1 to 2 miles wide. The combination of volcanic soil, high altitude, and the island's afternoon cloud cover creates a microclimate that produces a naturally low-acid, smooth, complex bean. 100% Kona is one of the most expensive coffees in the world. The donkeys — called paka in Hawaiian — worked farms that had no road access. The name stuck long after the roads arrived.",
     "difficulty": "curious",
-    "category": "culture"
+    "category": "coffee-culture"
   },
   {
     "shopId": "brambles-english-tea-room",
