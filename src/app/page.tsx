@@ -56,7 +56,7 @@ export default function Home() {
           cafe, and a diner on the bay.
         </p>
         <p className="font-serif text-lg leading-relaxed text-[#0d1f3c] mt-4">
-          Start in the Design District. Weave south between the two streets.
+          Start on Fifth Avenue. Weave south between the two streets.
           Finish at the Cove Inn on Naples Bay. The pier is five minutes west —
           currently being rebuilt for the sixth time since 1888. Walk to the
           13th Avenue South beach end to see the progress. The sunset still shows up.
