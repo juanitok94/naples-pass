@@ -1,6 +1,6 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import shopsData from '@/data/shops.json'
-import TimeGreeting from '@/components/TimeGreeting'
 import SaturdayBanner from '@/components/SaturdayBanner'
 
 const shops = shopsData as any[]
@@ -20,7 +20,9 @@ export default function Home() {
 
       {/* HEADER */}
       <div className="bg-[#0d1f3c] px-6 py-10 text-center border-b-4 border-[#c9a060]">
-        <TimeGreeting />
+        <p className="text-[#c9a060] text-xs tracking-[0.3em] uppercase mb-2 font-mono">
+          A WALKING GUIDE
+        </p>
         <h1 className="font-serif text-5xl font-black text-[#f5f0e8] leading-none">
           Naples,
         </h1>
@@ -28,40 +30,18 @@ export default function Home() {
           Florida
         </h2>
         <p className="text-[#c9a060] text-sm italic mt-3 opacity-70 leading-relaxed max-w-xs mx-auto">
-          Naples without the pier wouldn&apos;t be Naples.
-          The sixth rebuild is in progress.
-          We&apos;ll walk the corridor in the meantime.
+          The pier has been rebuilt five times. The sixth is in progress.
+          Walk the corridor in the meantime.
         </p>
-        <div className="mt-6 max-w-sm mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" preserveAspectRatio="xMidYMid meet" className="w-full">
-            <circle cx="320" cy="36" r="22" fill="#c9a060" opacity="0.4"/>
-            <circle cx="320" cy="36" r="14" fill="#c9a060" opacity="0.6"/>
-            <g fill="#c9a060">
-              <rect x="20" y="56" width="320" height="3"/>
-              <g>
-                <rect x="285" y="52" width="50" height="7"/>
-                <rect x="295" y="38" width="30" height="14"/>
-                <polygon points="291,38 310,28 329,38"/>
-              </g>
-              <g>
-                <rect x="22" y="59" width="1.5" height="22"/>
-                <rect x="46" y="59" width="1.5" height="22"/>
-                <rect x="70" y="59" width="1.5" height="22"/>
-                <rect x="94" y="59" width="1.5" height="22"/>
-                <rect x="118" y="59" width="1.5" height="22"/>
-                <rect x="142" y="59" width="1.5" height="22"/>
-                <rect x="166" y="59" width="1.5" height="22"/>
-                <rect x="190" y="59" width="1.5" height="22"/>
-                <rect x="214" y="59" width="1.5" height="22"/>
-                <rect x="238" y="59" width="1.5" height="22"/>
-                <rect x="262" y="59" width="1.5" height="22"/>
-                <rect x="281" y="59" width="1.5" height="22"/>
-                <rect x="295" y="59" width="1.5" height="22"/>
-                <rect x="311" y="59" width="1.5" height="22"/>
-                <rect x="327" y="59" width="1.5" height="22"/>
-              </g>
-            </g>
-          </svg>
+        <div className="mt-6 max-w-sm mx-auto overflow-hidden rounded-sm">
+          <Image
+            src="/opengraph-image.jpg"
+            alt="Naples, Florida"
+            width={1200}
+            height={630}
+            className="w-full opacity-80"
+            priority
+          />
         </div>
       </div>
 
