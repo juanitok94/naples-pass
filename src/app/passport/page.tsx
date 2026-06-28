@@ -241,7 +241,7 @@ export default function PassportPage() {
         {/* Fifth Avenue section */}
         <div className="flex items-center gap-3 mb-4">
           <p className="font-mono text-[10px] tracking-widest text-[#1a3560] opacity-60 uppercase whitespace-nowrap">
-            Design District + Fifth Ave
+            Fifth Ave
           </p>
           <div className="flex-1 border-t border-dashed border-[#1a3560] opacity-30" />
         </div>
