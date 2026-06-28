@@ -99,7 +99,7 @@ export default function Home() {
 
         {/* Fifth Avenue stops */}
         <p className="font-mono text-[11px] tracking-widest text-[#1a3560] opacity-80 uppercase mb-4 border-l-2 border-[#c9a060]/40 pl-3">
-          Design District + Fifth Avenue
+          Fifth Avenue
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
