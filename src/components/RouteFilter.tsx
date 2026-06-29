@@ -31,15 +31,17 @@ export default function RouteFilter() {
     [activeFilter]
   )
 
+  const sectionLabel = useMemo(() => {
+    if (activeFilter === 'morning') return 'MORNING — FIFTH AVENUE + THIRD STREET'
+    return 'EVENING — FIFTH AVENUE'
+  }, [activeFilter])
+
   const showDining = ['lunch', 'dinner', 'dessert'].includes(activeFilter)
 
   const filteredDirectory = useMemo(
     () => showDining ? allDirectoryStops.filter(s => s.mealtime?.includes(activeFilter)) : [],
     [activeFilter, showDining]
   )
-
-  const fifthStops = filteredCore.filter(s => s.zone === 'fifth')
-  const thirdStops = filteredCore.filter(s => s.zone === 'third' || s.zone === 'bay')
 
   function stopCard(shop: any, linked: boolean) {
     const inner = (
@@ -115,26 +117,14 @@ export default function RouteFilter() {
         })}
       </div>
 
-      {/* Fifth Ave core stops */}
-      {fifthStops.length > 0 && (
+      {/* Core stops */}
+      {filteredCore.length > 0 && (
         <>
           <p className="font-mono text-[11px] tracking-widest text-[#1a3560] opacity-80 uppercase mb-4 border-l-2 border-[#c9a060]/40 pl-3">
-            Fifth Avenue
+            {sectionLabel}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-            {fifthStops.map(s => stopCard(s, true))}
-          </div>
-        </>
-      )}
-
-      {/* Third St + Bay core stops */}
-      {thirdStops.length > 0 && (
-        <>
-          <p className="font-mono text-[11px] tracking-widest text-[#1a3560] opacity-80 uppercase mb-4 border-l-2 border-[#c9a060]/40 pl-3">
-            Third Street + Naples Bay
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {thirdStops.map(s => stopCard(s, true))}
+            {filteredCore.map(s => stopCard(s, true))}
           </div>
         </>
       )}
@@ -142,15 +132,15 @@ export default function RouteFilter() {
       {/* Empty core state */}
       {filteredCore.length === 0 && (
         <p className="font-serif italic text-[#1a3560] opacity-60 text-sm py-2">
-          The passport stops are morning and lunch spots.
+          The ten passport stops are morning and evening. Also on the corridor:
         </p>
       )}
 
-      {/* Dining — appears for Lunch / Dinner / Dessert */}
+      {/* Directory — appears for Lunch / Dinner / Dessert */}
       {showDining && filteredDirectory.length > 0 && (
         <div className="mt-6">
           <p className="font-mono text-[11px] tracking-widest text-[#1a3560] opacity-80 uppercase mb-4 border-l-2 border-[#c9a060]/40 pl-3">
-            Dining
+            Also on the Corridor
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {filteredDirectory.map(s => stopCard(s, false))}

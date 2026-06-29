@@ -39,10 +39,9 @@ export default function Home() {
       {/* INTRO */}
       <div className="max-w-2xl mx-auto px-6 py-10">
         <p className="font-serif text-lg leading-relaxed text-[#0d1f3c]">
-          Fifth Avenue South and Third Street South are two of the
-          finest walkable blocks in Florida. Ten stops: coffee, tea,
-          pastries, books, a garden cafe, and a diner on the bay.
-          Start on Fifth Avenue. Finish at the Cove Inn on Naples Bay.
+          Five morning stops. Five evening stops. All on two blocks of
+          Old Naples. Walk Fifth Avenue South and Third Street South.
+          Start with coffee and a scone. Come back for dinner.
         </p>
 
         <Link

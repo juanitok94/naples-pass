@@ -81,19 +81,19 @@ Symbol of Naples. Built 1888. Pelicans on the pilings.
 The pier silhouette is the passport's visual hero mark.
 5-minute walk from Cove Inn (stop 10).
 
-## The 10 Core Stops (5th Ave west→east, then 3rd St, then bay)
-| # | Shop | Zone | Address |
-|---|------|------|---------|
-| 1 | Brambles English Tea Room | fifth | 340 5th Ave S |
-| 2 | 5th Avenue Coffee Company | fifth | 599 5th Ave S |
-| 3 | The Brick Coffee & Bar | fifth | 531 5th Ave S |
-| 4 | Bontà Bakery | fifth | 824 5th Ave S #2 |
-| 5 | The Cafe | fifth | 821 5th Ave S |
-| 6 | Bad Ass Coffee of Hawaii | third | 1307 3rd St S |
-| 7 | Tony's Off Third | third | 1300 3rd St S |
-| 8 | Books on Third | third | 1300 3rd St S Suite 201 |
-| 9 | Jane's Cafe on 3rd | third | 1209 3rd St S |
-| 10 | Cove Inn Coffee Shoppe | bay | 900 Broad Ave S |
+## The 10 Core Stops (5 morning + 5 evening)
+| # | Shop | Zone | Address | Mealtime |
+|---|------|------|---------|---------|
+| 1 | Brambles English Tea Room | fifth | 340 5th Ave S | morning |
+| 2 | Bad Ass Coffee of Hawaii | third | 1307 3rd St S | morning |
+| 3 | 5th Avenue Coffee Company | fifth | 599 5th Ave S | morning |
+| 4 | Bontà Bakery | fifth | 824 5th Ave S #2 | morning |
+| 5 | Jane's Cafe on 3rd | third | 1209 3rd St S | morning |
+| 6 | Del Mar | fifth | 494 5th Ave S | dinner |
+| 7 | Osteria Tulia | fifth | 466 5th Ave S | dinner |
+| 8 | La Trattoria | fifth | 878 5th Ave S | dinner |
+| 9 | Ocean Prime | fifth | 699 5th Ave S | dinner |
+| 10 | Gelato&Co | fifth | 483 5th Ave S Unit 2 | dessert |
 
 ## Bonus/Directory Stops
 - Three Sixteen Coffee & Bakery (13500 Tamiami Trail N)
@@ -213,3 +213,4 @@ Format: [date] - what failed - why - what to do instead.
 - 2026-06-27 - Revision 3A: Five delight features (commit 356b188). Time-of-day greeting (Good morning/afternoon/evening, Naples) as 'use client' component replacing static eyebrow. Saturday farmers market banner — appears only Saturday before 11:30 AM, client component returns null otherwise. Last-stamped date written to localStorage on each stamp (recordStampDate in stamps.ts), shown on passport page when stampCount > 0. Gold route line segments on map — 9 individual divs replace single line, each fills gold when both neighboring stops are stamped (0.8s transition). Completion certificate on passport page when all 10 stamped — pier SVG, completion date stored in walk-complete-date localStorage key, all 10 stop names, share prompt. Existing COMPOSTELA block preserved below stamp grid.
 - 2026-06-27 - Revision 2.2 (stop swap + route reorder): Forever Fiore removed — no answer on phone verification calls. Replaced with Bad Ass Coffee of Hawaii (1307 3rd St S) per local recommendation from Ariana at Brambles. Route reordered: passport now runs 5th Avenue first (Brambles→The Cafe, stops 1–5) then crosses to 3rd Street South (Bad Ass Coffee→Jane's, stops 6–9) then bay finish (Cove Inn, stop 10). Brambles is now stop 1. OG image was already code-based (fixed in Rev 2.3) — no change needed. trivia.json: forever-fiore entry replaced with bad-ass-coffee Kona coffee question. nearbyPassportStops updated throughout to reflect new adjacency. Future dining layer candidates from Ariana: Del Mar (494 5th Ave S), Osteria Tulia (466 5th Ave S), Ocean Prime (699 5th Ave S), La Trattoria (878 5th Ave S), Gelato&Co (483 5th Ave S Unit 2), 3rd Street Farmers Market (Saturdays 7:30–11:30 AM).
 - 2026-06-28 - Revision 2.5: metadataBase fixed (old-naples-passport.vercel.app → naples-pass.vercel.app). Homepage copy: pier reference removed from body paragraph and footer tagline — kept only in hero subtitle. Second body paragraph ("Start in the Design District...") removed entirely. Footer note simplified to "Naples, FL · Est. 1885 · Ten stops. Two streets." Quiet Six → Quiet Five (only 5 core stops have hygge:true — brambles, the-cafe, tonys-off-third, books-on-third, janes-cafe-on-3rd). hyggeStops filter updated to exclude passportType:"directory" stops. Brambles address: website returned 403, could not verify externally; keeping 340 5th Ave S per existing verified data. Bad Ass Coffee website: provided URL (badassco.com) redirects to domain-parking page, badassoffhawaii.com also unresolvable — website field left blank. mealtime field added to all 10 core stops (all: morning+lunch). Five directory stops added: Del Mar, Osteria Tulia, Ocean Prime, La Trattoria, Gelato&Co — all zone fifth, passportType directory, with mealtime as lunch/dinner/dessert as appropriate. RouteFilter.tsx client component added: mealtime filter pills (Morning/Lunch/Dinner/Dessert), time-based default (dinner if hour >= 18, else morning), shows Dining section for non-Morning filters. README replaced: Haywood Hoppers → Naples content.
+- 2026-06-29 - Revision 2.7: Passport expanded to 5 morning + 5 evening stops. Five coffee stops demoted from core to directory (the-brick, the-cafe, tonys-off-third, books-on-third, cove-inn). Five morning stops renumbered 1–5 (brambles, bad-ass, fifth-ave-coffee, bonta, janes). Five dining stops promoted from directory to core (stops 6–10: del-mar, osteria-tulia, la-trattoria, ocean-prime, gelato-co) with stamp data, hours, and full field set added. RouteFilter.tsx: zone-based section split (Fifth Avenue / Third Street + Naples Bay) replaced with single dynamic label (MORNING — FIFTH AVENUE + THIRD STREET / EVENING — FIFTH AVENUE). Directory section label changed to "Also on the Corridor." Homepage body paragraph updated to reflect morning/evening structure. trivia.json retains 10 entries — update needed if promoted stop trivia is desired (brick, cafe, tonys, books, cove-inn trivia entries now reference directory stops only).
