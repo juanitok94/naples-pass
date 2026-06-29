@@ -26,6 +26,7 @@
     "streetSide": "south",
     "selloColor": "#c9a060",
     "hygge": true,
+    "mealtime": ["morning", "lunch"],
     "stamp": {
       "welcomeLine": "Brambles ☕",
       "subLine": "Hidden in the alley. The scones are made this morning."
@@ -71,6 +72,7 @@
     "streetSide": "south",
     "selloColor": "#0d1f3c",
     "hygge": false,
+    "mealtime": ["morning", "lunch"],
     "stamp": {
       "welcomeLine": "5th Ave Coffee Co ☕",
       "subLine": "The corner that started it all."
@@ -116,6 +118,7 @@
     "streetSide": "south",
     "selloColor": "#8b6914",
     "hygge": false,
+    "mealtime": ["morning", "lunch"],
     "stamp": {
       "welcomeLine": "The Brick 🧱",
       "subLine": "Coffee now. Wine later. Same table."
@@ -161,6 +164,7 @@
     "streetSide": "south",
     "selloColor": "#b5451b",
     "hygge": false,
+    "mealtime": ["morning", "lunch"],
     "stamp": {
       "welcomeLine": "Bontà 🥐",
       "subLine": "Italian in 900 square feet. Everything is picture perfect."
@@ -205,6 +209,7 @@
     "streetSide": "south",
     "selloColor": "#c9a060",
     "hygge": true,
+    "mealtime": ["morning", "lunch"],
     "stamp": {
       "welcomeLine": "You made it to The Cafe.",
       "subLine": "Halfway home. The pier is closer than it feels."
@@ -250,6 +255,7 @@
     "streetSide": "west",
     "selloColor": "#c9a060",
     "hygge": false,
+    "mealtime": ["morning", "lunch"],
     "stamp": {
       "welcomeLine": "You found the Bad Ass.",
       "subLine": "First stamp on 3rd. Hawaiian coffee, Florida sunshine."
@@ -294,6 +300,7 @@
     "streetSide": "west",
     "selloColor": "#1a3a6a",
     "hygge": true,
+    "mealtime": ["morning", "lunch"],
     "stamp": {
       "welcomeLine": "Tony's Off Third 🌿",
       "subLine": "Here since 1995. The courtyard is waiting."
@@ -339,6 +346,7 @@
     "streetSide": "west",
     "selloColor": "#3d2b6b",
     "hygge": true,
+    "mealtime": ["morning", "lunch"],
     "stamp": {
       "welcomeLine": "Books on Third 📖",
       "subLine": "16,000 books and a children's cove. You'll stay."
@@ -384,6 +392,7 @@
     "streetSide": "west",
     "selloColor": "#2a6b3a",
     "hygge": true,
+    "mealtime": ["morning", "lunch"],
     "stamp": {
       "welcomeLine": "Jane's Cafe ☀️",
       "subLine": "Open air. Organic. Reader's Choice every year."
@@ -429,6 +438,7 @@
     "streetSide": "south",
     "selloColor": "#0d4a6b",
     "hygge": false,
+    "mealtime": ["morning", "lunch"],
     "stamp": {
       "welcomeLine": "You walked the corridor.",
       "subLine": "Ten stops. Two streets. The pier is coming back. Walk to the water — the sunset is still there."
@@ -446,5 +456,120 @@
     "website": "coveinnnaples.com",
     "status": "confirmed-open",
     "lastVerified": "2026-06-26"
+  },
+  {
+    "id": "del-mar",
+    "name": "Del Mar",
+    "address": "494 5th Ave S",
+    "city": "Naples",
+    "state": "FL",
+    "zip": "34102",
+    "coordinates": [-81.7955, 26.1417],
+    "layers": ["restaurant"],
+    "zone": "fifth",
+    "passportStop": null,
+    "passportType": "directory",
+    "selloColor": "#1a5276",
+    "hygge": false,
+    "mealtime": ["lunch", "dinner"],
+    "story": {
+      "headline": "The anchor of Fifth Avenue.",
+      "body": "Del Mar sits at the heart of 5th Avenue South and has been the standard-bearer for the corridor's dining scene. Fresh seafood, an extensive wine list, and a patio that fills up by 6 PM. Locals book ahead.",
+      "insiderTip": "Lunch is easier to walk into than dinner. Same kitchen, half the wait."
+    },
+    "status": "confirmed-open",
+    "lastVerified": "2026-06-27"
+  },
+  {
+    "id": "osteria-tulia",
+    "name": "Osteria Tulia",
+    "address": "466 5th Ave S",
+    "city": "Naples",
+    "state": "FL",
+    "zip": "34102",
+    "coordinates": [-81.7952, 26.1417],
+    "layers": ["restaurant"],
+    "zone": "fifth",
+    "passportStop": null,
+    "passportType": "directory",
+    "selloColor": "#7b241c",
+    "hygge": true,
+    "mealtime": ["lunch", "dinner"],
+    "story": {
+      "headline": "Italian. Serious Italian.",
+      "body": "Osteria Tulia is the kind of place that makes you forget you're in Florida. Handmade pasta, Italian wine list, dark wood and candlelight. One of the most acclaimed restaurants on the corridor.",
+      "insiderTip": "The bar seats are first-come. Worth it for the pasta alone."
+    },
+    "status": "confirmed-open",
+    "lastVerified": "2026-06-27"
+  },
+  {
+    "id": "ocean-prime",
+    "name": "Ocean Prime",
+    "address": "699 5th Ave S",
+    "city": "Naples",
+    "state": "FL",
+    "zip": "34102",
+    "coordinates": [-81.7940, 26.1415],
+    "layers": ["restaurant"],
+    "zone": "fifth",
+    "passportStop": null,
+    "passportType": "directory",
+    "selloColor": "#1a2744",
+    "hygge": false,
+    "mealtime": ["dinner"],
+    "story": {
+      "headline": "When Naples dresses up.",
+      "body": "Ocean Prime is the special occasion restaurant on Fifth Avenue. Steaks, seafood, craft cocktails, and a room that means business. The kind of place visitors remember.",
+      "insiderTip": "The happy hour at the bar is a well-kept secret. 5-7 PM daily."
+    },
+    "status": "confirmed-open",
+    "lastVerified": "2026-06-27"
+  },
+  {
+    "id": "la-trattoria",
+    "name": "La Trattoria",
+    "address": "878 5th Ave S",
+    "city": "Naples",
+    "state": "FL",
+    "zip": "34102",
+    "coordinates": [-81.7958, 26.1415],
+    "layers": ["restaurant"],
+    "zone": "fifth",
+    "passportStop": null,
+    "passportType": "directory",
+    "selloColor": "#6e2c00",
+    "hygge": true,
+    "mealtime": ["dinner"],
+    "story": {
+      "headline": "Last call on Fifth Avenue.",
+      "body": "La Trattoria stays open until 1 AM — the latest kitchen on the corridor. Italian classics, a lively bar, live music most nights. Where the evening ends up.",
+      "insiderTip": "Open until 1 AM. The only place on Fifth Avenue still cooking when everything else has called it a night."
+    },
+    "status": "confirmed-open",
+    "lastVerified": "2026-06-27"
+  },
+  {
+    "id": "gelato-co",
+    "name": "Gelato&Co",
+    "address": "483 5th Ave S Unit 2",
+    "city": "Naples",
+    "state": "FL",
+    "zip": "34102",
+    "coordinates": [-81.7953, 26.1417],
+    "layers": ["dessert"],
+    "zone": "fifth",
+    "passportStop": null,
+    "passportType": "directory",
+    "selloColor": "#d4ac0d",
+    "hygge": false,
+    "mealtime": ["dessert"],
+    "story": {
+      "headline": "Line out the door. Worth it.",
+      "body": "Gelato&Co is the unofficial closing ceremony for a night on Fifth Avenue. Everyone ends up here — after dinner, mid-walk, or just because. The line moves fast and the gelato is the real thing.",
+      "insiderTip": "Open until 10 PM weekdays, 11 PM Friday and Saturday. Go after dinner, not before."
+    },
+    "status": "confirmed-open",
+    "lastVerified": "2026-06-27"
   }
 ]

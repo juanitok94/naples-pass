@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import shopsData from '@/data/shops.json'
 import SaturdayBanner from '@/components/SaturdayBanner'
+import RouteFilter from '@/components/RouteFilter'
 
 const shops = shopsData as any[]
 
@@ -9,10 +10,9 @@ const coreStops = shops
   .filter(s => s.passportType === 'core')
   .sort((a, b) => a.passportStop - b.passportStop)
 
-const hyggeStops = shops.filter(s => s.hygge === true)
+const hyggeStops = shops.filter(s => s.hygge === true && s.passportType !== 'directory')
 
-const fifthStops = coreStops.filter(s => s.zone === 'design' || s.zone === 'fifth')
-const thirdStops = coreStops.filter(s => s.zone === 'third' || s.zone === 'bay')
+const directoryStops = shops.filter(s => s.passportType === 'directory')
 
 export default function Home() {
   return (
@@ -51,15 +51,9 @@ export default function Home() {
       <div className="max-w-2xl mx-auto px-6 py-10">
         <p className="font-serif text-lg leading-relaxed text-[#0d1f3c]">
           Fifth Avenue South and Third Street South are two of the
-          finest walkable blocks in Florida. Between them: ten stops
-          worth finding — coffee, tea, pastries, books, a garden
-          cafe, and a diner on the bay.
-        </p>
-        <p className="font-serif text-lg leading-relaxed text-[#0d1f3c] mt-4">
-          Start on Fifth Avenue. Weave south between the two streets.
-          Finish at the Cove Inn on Naples Bay. The pier is five minutes west —
-          currently being rebuilt for the sixth time since 1888. Walk to the
-          13th Avenue South beach end to see the progress. The sunset still shows up.
+          finest walkable blocks in Florida. Ten stops: coffee, tea,
+          pastries, books, a garden cafe, and a diner on the bay.
+          Start on Fifth Avenue. Finish at the Cove Inn on Naples Bay.
         </p>
 
         {/* CTA */}
@@ -85,94 +79,12 @@ export default function Home() {
 
         <p className="font-mono text-[10px] tracking-widest text-[#1a3560] opacity-40
                       uppercase text-center mt-8">
-          Naples, FL · Est. 1885 · The pier has been rebuilt five times.
-          The sixth is underway.
+          Naples, FL · Est. 1885 · Ten stops. Two streets.
         </p>
       </div>
 
-      {/* THE ROUTE */}
-      <div className="max-w-2xl mx-auto px-6 pb-6">
-        <div className="flex items-center gap-3 mb-6">
-          <h3 className="font-serif text-2xl font-bold text-[#0d1f3c]">The Route</h3>
-          <div className="flex-1 border-t border-dashed border-[#1a3560] opacity-30" />
-        </div>
-
-        {/* Fifth Avenue stops */}
-        <p className="font-mono text-[11px] tracking-widest text-[#1a3560] opacity-80 uppercase mb-4 border-l-2 border-[#c9a060]/40 pl-3">
-          Fifth Avenue
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-          {fifthStops.map(shop => (
-            <Link
-              key={shop.id}
-              href={`/stop/${shop.id}`}
-              className="flex items-center gap-3 p-4 bg-white/70 border border-[#1a3560]/20
-                         rounded-sm hover:bg-white/80 hover:-translate-y-0.5
-                         shadow-[0_2px_8px_rgba(13,31,60,0.08)]
-                         hover:shadow-[0_4px_16px_rgba(13,31,60,0.14)]
-                         transition-all duration-200 group"
-            >
-              <span
-                className="w-9 h-9 rounded-full flex items-center justify-center
-                           text-white text-xs font-mono font-bold flex-shrink-0"
-                style={{ backgroundColor: shop.selloColor }}
-              >
-                {shop.passportStop}
-              </span>
-              <div className="flex-1 min-w-0">
-                <p className="font-serif font-bold text-[#0d1f3c] text-base truncate">
-                  {shop.name}
-                </p>
-                <p className="font-mono text-[11px] text-[#1a3560] opacity-80">
-                  {shop.address}
-                </p>
-              </div>
-              <span className="text-[#1a3560] text-lg opacity-40 group-hover:opacity-70 transition-all">
-                ›
-              </span>
-            </Link>
-          ))}
-        </div>
-
-        {/* Third Street stops */}
-        <p className="font-mono text-[11px] tracking-widest text-[#1a3560] opacity-80 uppercase mb-4 border-l-2 border-[#c9a060]/40 pl-3">
-          Third Street + Naples Bay
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {thirdStops.map(shop => (
-            <Link
-              key={shop.id}
-              href={`/stop/${shop.id}`}
-              className="flex items-center gap-3 p-4 bg-white/70 border border-[#1a3560]/20
-                         rounded-sm hover:bg-white/80 hover:-translate-y-0.5
-                         shadow-[0_2px_8px_rgba(13,31,60,0.08)]
-                         hover:shadow-[0_4px_16px_rgba(13,31,60,0.14)]
-                         transition-all duration-200 group"
-            >
-              <span
-                className="w-9 h-9 rounded-full flex items-center justify-center
-                           text-white text-xs font-mono font-bold flex-shrink-0"
-                style={{ backgroundColor: shop.selloColor }}
-              >
-                {shop.passportStop}
-              </span>
-              <div className="flex-1 min-w-0">
-                <p className="font-serif font-bold text-[#0d1f3c] text-base truncate">
-                  {shop.name}
-                </p>
-                <p className="font-mono text-[11px] text-[#1a3560] opacity-80">
-                  {shop.address}
-                </p>
-              </div>
-              <span className="text-[#1a3560] text-lg opacity-40 group-hover:opacity-70 transition-all">
-                ›
-              </span>
-            </Link>
-          ))}
-        </div>
-      </div>
+      {/* THE ROUTE — client component handles filter pills + stop cards */}
+      <RouteFilter coreStops={coreStops} directoryStops={directoryStops} />
 
       {/* HYGGE COLLECTION */}
       <div className="max-w-2xl mx-auto px-6 pb-10">
@@ -182,11 +94,11 @@ export default function Home() {
             🕯 Hidden Collection
           </p>
           <p className="font-serif text-lg font-bold text-[#0d1f3c]">
-            The Quiet Six
+            The Quiet Five
           </p>
           <p className="font-serif italic text-sm text-[#1a3560] mt-1 leading-relaxed">
-            Six stops where Old Naples slows all the way down.
-            Find all six.
+            Five stops where Old Naples slows all the way down.
+            Find all five.
           </p>
           <div className="flex flex-wrap mt-3" style={{ gap: '0.5rem' }}>
             {hyggeStops.map(shop => (

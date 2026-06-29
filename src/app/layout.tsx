@@ -25,7 +25,7 @@ const ibmMono = IBM_Plex_Mono({
 
 // OG image: Bailey Rapp via Unsplash, free commercial use
 export const metadata: Metadata = {
-  metadataBase: new URL('https://old-naples-passport.vercel.app'),
+  metadataBase: new URL('https://naples-pass.vercel.app'),
   title: 'Naples, Florida — A Walking Guide',
   description: 'Ten stops across Fifth Avenue South and Third Street South. Coffee, tea, pastries, books, and a diner on the bay. Built by Peachy Kean DevOps.',
   openGraph: {

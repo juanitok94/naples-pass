@@ -1,16 +1,13 @@
-# Haywood Hoppers
+# Naples, Florida — A Walking Guide
 
-A digital coffee passport for Haywood Road — West Asheville's main street.
-
-Ten coffee shops. One road. Walk it.
+Ten stops. Two streets. Walk the corridor.
 
 ## What this is
 
-A warmly narrated neighborhood guide and passport game built on the
-Camino de Santiago pilgrim passport model. Collect stamps at each of
-the 10 core coffee stops on Haywood Road. Earn your True Local badge.
-
-Built with love by a seven-year West Asheville resident.
+A warmly narrated walking guide and passport game for Fifth Avenue South
+and Third Street South in Old Naples, Florida. Collect stamps at each of
+the 10 core stops — coffee, tea, pastries, books, a garden cafe, and a
+diner on the bay. Built by Peachy Kean DevOps, LLC.
 
 ## Stack
 
@@ -22,20 +19,22 @@ Built with love by a seven-year West Asheville resident.
 
 ## Run locally
 
-git clone https://github.com/[yourusername]/wavl-guide.git
-cd wavl-guide
+```bash
+git clone https://github.com/juanitok94/naples-pass.git
+cd naples-pass
 npm install
 npm run dev
+```
 
 Open http://localhost:3000
 
 ## Data
 
-All business data lives in /src/data/
-- shops.json — 49 stops, 9 layers, full data model
-- layers.json — layer definitions
-- badges.json — badge tiers
-- trivia.json — per-stop trivia
+All business data lives in `/src/data/`
+- `shops.json` — 10 core stops + directory stops, full data model
+- `layers.json` — layer definitions
+- `badges.json` — badge tiers
+- `trivia.json` — per-stop trivia
 
 Community corrections welcome via PR to the JSON files.
 
@@ -47,4 +46,4 @@ Community corrections welcome via PR to the JSON files.
 
 ## Hashtags
 
-#HaywoodHoppers #WestAVLCoffee #AVLLocal
+#NaplesFlorida #NaplesPier #OldNaples #5thAvenueSouth
