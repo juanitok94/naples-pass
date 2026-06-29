@@ -706,9 +706,9 @@
     "lastVerified": "2026-06-26"
   },
   {
-    "id": "third-street-south-farmers-market",
+    "id": "third-street-farmers-market",
     "name": "Third Street South Farmers Market",
-    "address": "1200 3rd St S",
+    "address": "3rd Street S between Broad Ave S and 13th Ave S",
     "city": "Naples",
     "state": "FL",
     "zip": "34102",
@@ -716,26 +716,19 @@
     "layers": ["market"],
     "zone": "third",
     "passportStop": null,
-    "passportType": "bonus",
+    "passportType": "directory",
     "selloColor": "#2a6b3a",
-    "hygge": true,
+    "hygge": false,
     "mealtime": ["morning"],
     "hours": {
-      "mon": "Closed",
-      "tue": "Closed",
-      "wed": "Closed",
-      "thu": "Closed",
-      "fri": "Closed",
-      "sat": "7:30AM–11:30AM",
-      "sun": "Closed",
-      "note": "Saturday only, October through July"
+      "sat": "7:30 AM – 11:30 AM"
     },
     "story": {
-      "headline": "60 vendors, 30 years, every Saturday.",
-      "body": "The Third Street South Farmers Market has run every Saturday since 1994. Over 60 vendors — produce, flowers, prepared food, live music. If you are walking the corridor on a Saturday morning, this is not optional.",
-      "insiderTip": "Starts at 7:30 AM. The good produce goes early."
+      "headline": "Thirty years and never missed a Saturday.",
+      "body": "The Third Street South Farmers Market started as a seasonal venture and never stopped. Every Saturday, year-round, 7:30 to 11:30 AM. Fresh produce, seafood, pastries, flowers, roasted coffee, dog treats, and live music. The location shifts between the street itself and the Neapolitan lot depending on season, but the market never takes a Saturday off.",
+      "insiderTip": "Mid-November through April it's on the street itself — Third Street between Broad Ave S and 13th Ave S. May through October find it in the Neapolitan parking lot between Third Street and Gordon Drive."
     },
     "status": "confirmed-open",
-    "lastVerified": "2026-06-26"
+    "lastVerified": "2026-06-29"
   }
 ]

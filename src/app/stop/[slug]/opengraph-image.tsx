@@ -198,7 +198,7 @@ export default async function Image({
               display: 'flex',
             }}
           >
-            Naples, Florida — A Walking Guide
+            Naples, Florida — A Strolling Guide
           </div>
           <div
             style={{

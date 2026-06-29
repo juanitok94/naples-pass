@@ -10,7 +10,7 @@ export default function Home() {
       {/* HEADER */}
       <div className="bg-[#0d1f3c] px-6 py-10 text-center border-b-4 border-[#c9a060]">
         <p className="text-[#c9a060] text-xs tracking-[0.3em] uppercase mb-2 font-mono">
-          A WALKING GUIDE
+          A STROLLING GUIDE
         </p>
         <h1 className="font-serif text-5xl font-black text-[#f5f0e8] leading-none">
           Naples,
@@ -20,7 +20,7 @@ export default function Home() {
         </h2>
         <p className="text-[#c9a060] text-sm italic mt-3 opacity-70 leading-relaxed max-w-xs mx-auto">
           The pier has been rebuilt five times. The sixth is in progress.
-          Walk the corridor in the meantime.
+          Stroll the corridor in the meantime.
         </p>
         <div className="mt-6 max-w-sm mx-auto overflow-hidden rounded-sm">
           <Image
@@ -40,7 +40,7 @@ export default function Home() {
       <div className="max-w-2xl mx-auto px-6 py-10">
         <p className="font-serif text-lg leading-relaxed text-[#0d1f3c]">
           Five morning stops. Five evening stops. All on two blocks of
-          Old Naples. Walk Fifth Avenue South and Third Street South.
+          Old Naples. Stroll Fifth Avenue South and Third Street South.
           Start with coffee and a scone. Come back for dinner.
         </p>
 
@@ -68,6 +68,27 @@ export default function Home() {
                       uppercase text-center mt-8">
           Naples, FL · Est. 1885 · Ten stops. Two streets.
         </p>
+      </div>
+
+      {/* FARMERS MARKET FEATURE */}
+      <div className="bg-[#0d1f3c] border-t-2 border-b-2 border-[#c9a060] px-6 py-10">
+        <div className="max-w-2xl mx-auto">
+          <p className="font-mono text-[#c9a060] text-[10px] tracking-[0.35em] uppercase mb-4">
+            Every Saturday
+          </p>
+          <h2 className="font-serif text-2xl font-bold text-[#f5f0e8] mb-5 leading-snug">
+            Third Street South<br />Farmers Market
+          </h2>
+          <p className="font-serif text-[#e8c98a] text-base leading-relaxed opacity-90">
+            7:30 to 11:30 AM, year-round without exception.
+            Thirty years in and still the best reason to be on the
+            corridor before noon. Fresh produce, seafood, pastries,
+            flowers, roasted coffee, and live music. The location
+            shifts with the season — on the street itself
+            November through April, in the Neapolitan lot May
+            through October — but it never takes a Saturday off.
+          </p>
+        </div>
       </div>
 
       {/* THE ROUTE + DINING — self-contained client component */}

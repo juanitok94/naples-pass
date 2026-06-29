@@ -1,10 +1,10 @@
-# Naples, Florida — A Walking Guide
+# Naples, Florida — A Strolling Guide
 
-Ten stops. Two streets. Walk the corridor.
+Ten stops. Two streets. Stroll the corridor.
 
 ## What this is
 
-A warmly narrated walking guide and passport game for Fifth Avenue South
+A warmly narrated strolling guide and passport game for Fifth Avenue South
 and Third Street South in Old Naples, Florida. Collect stamps at each of
 the 10 core stops — coffee, tea, pastries, books, a garden cafe, and a
 diner on the bay. Built by Peachy Kean DevOps, LLC.
