@@ -23,7 +23,7 @@ const ibmMono = IBM_Plex_Mono({
   display: 'swap',
 })
 
-// OG image: Bailey Rapp via Unsplash, free commercial use
+// OG image: Bailey Rapp via Unsplash, free commercial use — naples-pass.vercel.app, 2026-06-29
 export const metadata: Metadata = {
   metadataBase: new URL('https://naples-pass.vercel.app'),
   title: 'Naples, Florida — A Strolling Guide',
