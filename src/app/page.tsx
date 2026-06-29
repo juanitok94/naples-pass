@@ -1,18 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import shopsData from '@/data/shops.json'
 import SaturdayBanner from '@/components/SaturdayBanner'
 import RouteFilter from '@/components/RouteFilter'
-
-const shops = shopsData as any[]
-
-const coreStops = shops
-  .filter(s => s.passportType === 'core')
-  .sort((a, b) => a.passportStop - b.passportStop)
-
-const hyggeStops = shops.filter(s => s.hygge === true && s.passportType !== 'directory')
-
-const directoryStops = shops.filter(s => s.passportType === 'directory')
 
 export default function Home() {
   return (
@@ -56,7 +45,6 @@ export default function Home() {
           Start on Fifth Avenue. Finish at the Cove Inn on Naples Bay.
         </p>
 
-        {/* CTA */}
         <Link
           href="/passport"
           className="block w-full mt-8 py-4 bg-[#0d1f3c] text-[#f5f0e8] text-center
@@ -83,38 +71,8 @@ export default function Home() {
         </p>
       </div>
 
-      {/* THE ROUTE — client component handles filter pills + stop cards */}
-      <RouteFilter coreStops={coreStops} directoryStops={directoryStops} />
-
-      {/* HYGGE COLLECTION */}
-      <div className="max-w-2xl mx-auto px-6 pb-10">
-        <div className="mt-6 p-6 bg-white/60 backdrop-blur-sm border border-[#1a3560]/30 rounded-sm
-                        shadow-[0_2px_12px_rgba(13,31,60,0.10)]">
-          <p className="font-mono text-[10px] tracking-widest text-[#0d4a6b] uppercase mb-1">
-            🕯 Hidden Collection
-          </p>
-          <p className="font-serif text-lg font-bold text-[#0d1f3c]">
-            The Quiet Five
-          </p>
-          <p className="font-serif italic text-sm text-[#1a3560] mt-1 leading-relaxed">
-            Five stops where Old Naples slows all the way down.
-            Find all five.
-          </p>
-          <div className="flex flex-wrap mt-3" style={{ gap: '0.5rem' }}>
-            {hyggeStops.map(shop => (
-              <Link
-                key={shop.id}
-                href={`/stop/${shop.id}`}
-                className="inline-block text-xs font-mono px-2 py-1 rounded-sm
-                           text-white opacity-80 hover:opacity-100 transition-opacity"
-                style={{ backgroundColor: shop.selloColor }}
-              >
-                {shop.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* THE ROUTE + DINING — self-contained client component */}
+      <RouteFilter />
 
       {/* FOOTER */}
       <div className="bg-[#0d1f3c] px-6 py-8 text-center border-t-2 border-[#c9a060]">

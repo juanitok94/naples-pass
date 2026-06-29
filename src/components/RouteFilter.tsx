@@ -1,18 +1,16 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
+import shopsData from '@/data/shops.json'
 
-type Shop = {
-  id: string
-  name: string
-  address: string
-  zone: string
-  passportStop?: number | null
-  selloColor?: string
-  mealtime?: string[]
-  story?: { insiderTip?: string }
-}
+const shops = shopsData as any[]
+
+const allCoreStops = shops
+  .filter(s => s.passportType === 'core')
+  .sort((a, b) => a.passportStop - b.passportStop)
+
+const allDirectoryStops = shops.filter(s => s.passportType === 'directory')
 
 const PILLS = [
   { id: 'morning', label: 'Morning', icon: '☀️' },
@@ -21,29 +19,29 @@ const PILLS = [
   { id: 'dessert', label: 'Dessert', icon: '🍦' },
 ]
 
-export default function RouteFilter({
-  coreStops,
-  directoryStops,
-}: {
-  coreStops: Shop[]
-  directoryStops: Shop[]
-}) {
+export default function RouteFilter() {
   const [activeFilter, setActiveFilter] = useState<string>('morning')
 
   useEffect(() => {
     if (new Date().getHours() >= 18) setActiveFilter('dinner')
   }, [])
 
-  const filteredCore = coreStops.filter(s => s.mealtime?.includes(activeFilter))
+  const filteredCore = useMemo(
+    () => allCoreStops.filter(s => s.mealtime?.includes(activeFilter)),
+    [activeFilter]
+  )
+
   const showDining = ['lunch', 'dinner', 'dessert'].includes(activeFilter)
-  const filteredDirectory = showDining
-    ? directoryStops.filter(s => s.mealtime?.includes(activeFilter))
-    : []
+
+  const filteredDirectory = useMemo(
+    () => showDining ? allDirectoryStops.filter(s => s.mealtime?.includes(activeFilter)) : [],
+    [activeFilter, showDining]
+  )
 
   const fifthStops = filteredCore.filter(s => s.zone === 'fifth')
   const thirdStops = filteredCore.filter(s => s.zone === 'third' || s.zone === 'bay')
 
-  const stopCard = (shop: Shop, linked = true) => {
+  function stopCard(shop: any, linked: boolean) {
     const inner = (
       <>
         <span
@@ -68,19 +66,19 @@ export default function RouteFilter({
       </>
     )
 
-    const cls = `flex items-start gap-3 p-4 bg-white/70 border border-[#1a3560]/20
-                 rounded-sm shadow-[0_2px_8px_rgba(13,31,60,0.08)] transition-all duration-200`
+    const base = `flex items-start gap-3 p-4 bg-white/70 border border-[#1a3560]/20
+                  rounded-sm shadow-[0_2px_8px_rgba(13,31,60,0.08)] transition-all duration-200`
 
     return linked ? (
       <Link
         key={shop.id}
         href={`/stop/${shop.id}`}
-        className={`${cls} hover:bg-white/80 hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(13,31,60,0.14)] group`}
+        className={`${base} hover:bg-white/80 hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(13,31,60,0.14)] group`}
       >
         {inner}
       </Link>
     ) : (
-      <div key={shop.id} className={cls}>
+      <div key={shop.id} className={base}>
         {inner}
       </div>
     )
@@ -117,7 +115,7 @@ export default function RouteFilter({
         })}
       </div>
 
-      {/* Fifth Ave stops */}
+      {/* Fifth Ave core stops */}
       {fifthStops.length > 0 && (
         <>
           <p className="font-mono text-[11px] tracking-widest text-[#1a3560] opacity-80 uppercase mb-4 border-l-2 border-[#c9a060]/40 pl-3">
@@ -129,7 +127,7 @@ export default function RouteFilter({
         </>
       )}
 
-      {/* Third St + Bay stops */}
+      {/* Third St + Bay core stops */}
       {thirdStops.length > 0 && (
         <>
           <p className="font-mono text-[11px] tracking-widest text-[#1a3560] opacity-80 uppercase mb-4 border-l-2 border-[#c9a060]/40 pl-3">
@@ -141,14 +139,14 @@ export default function RouteFilter({
         </>
       )}
 
-      {/* Empty core state — dinner/dessert filters have no core stops */}
+      {/* Empty core state */}
       {filteredCore.length === 0 && (
         <p className="font-serif italic text-[#1a3560] opacity-60 text-sm py-2">
           The passport stops are morning and lunch spots.
         </p>
       )}
 
-      {/* Dining section — visible when Lunch / Dinner / Dessert is active */}
+      {/* Dining — appears for Lunch / Dinner / Dessert */}
       {showDining && filteredDirectory.length > 0 && (
         <div className="mt-6">
           <p className="font-mono text-[11px] tracking-widest text-[#1a3560] opacity-80 uppercase mb-4 border-l-2 border-[#c9a060]/40 pl-3">
