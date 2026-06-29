@@ -242,13 +242,13 @@
     "rating": 4.4,
     "reviewCount": 0,
     "hours": {
-      "mon": "6:00 AM – 8:00 PM",
-      "tue": "6:00 AM – 8:00 PM",
-      "wed": "6:00 AM – 8:00 PM",
-      "thu": "6:00 AM – 8:00 PM",
-      "fri": "6:00 AM – 8:00 PM",
-      "sat": "6:00 AM – 8:00 PM",
-      "sun": "6:00 AM – 8:00 PM"
+      "mon": "7:00 AM – 5:00 PM",
+      "tue": "7:00 AM – 5:00 PM",
+      "wed": "7:00 AM – 5:00 PM",
+      "thu": "7:00 AM – 5:00 PM",
+      "fri": "7:00 AM – 5:00 PM",
+      "sat": "7:00 AM – 5:00 PM",
+      "sun": "7:00 AM – 5:00 PM"
     },
     "passportStop": 6,
     "passportType": "core",
@@ -262,7 +262,7 @@
     },
     "story": {
       "headline": "Aloha on Third Street.",
-      "body": "Bad Ass Coffee of Hawaii has been on 3rd Street South since before most of the boutiques arrived. Born on the Big Island in 1989, named after the donkeys that hauled Kona beans up the mountain. The Naples location is locally owned, opens at 6 AM — earliest on the corridor — and draws the kind of morning regulars who know each other's orders. Dog-friendly patio. Hawaiian blends. A locals-first start to the 3rd Street stretch.",
+      "body": "Bad Ass Coffee of Hawaii has been on 3rd Street South since before most of the boutiques arrived. Born on the Big Island in 1989, named after the donkeys that hauled Kona beans up the mountain. The Naples location is locally owned and ranked #2 coffee shop in Naples on TripAdvisor. Dog-friendly patio. Hawaiian blends. A locals-first start to the 3rd Street stretch.",
       "insiderTip": "The 100% Kona is worth the upgrade. Ask for it iced with coconut milk — unofficial local order."
     },
     "offer": { "active": false, "type": "verbal", "text": "", "reward": "" },
