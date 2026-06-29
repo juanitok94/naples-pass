@@ -33,7 +33,7 @@ const bonusStops = shops.filter(s => s.passportType === 'bonus')
 export default function MapPage() {
   const [stamps, setStamps] = useState<StampRecord>({})
   const [mounted, setMounted] = useState(false)
-  const [selectedLayer, setSelectedLayer] = useState<string>('coffee')
+  const [selectedLayer, setSelectedLayer] = useState<string | null>(null)
   const [selectedStop, setSelectedStop] = useState<string | null>(null)
   const [flipped, setFlipped] = useState(false)
 
@@ -53,16 +53,19 @@ export default function MapPage() {
   }
 
   const visibleCoreStops = useMemo(() => {
+    if (selectedLayer === null) return coreStops
     return coreStops.filter(s => s.layers.includes(selectedLayer))
   }, [selectedLayer])
 
   const visibleBonusStops = useMemo(() => {
+    if (selectedLayer === null) return []
     return bonusStops.filter(s => s.layers.includes(selectedLayer))
   }, [selectedLayer])
 
   const visibleDirectoryStops = useMemo(() => {
     return shops.filter(s => {
-      if (s.passportType) return false
+      if (s.passportType !== 'directory') return false
+      if (selectedLayer === null) return s.id === 'third-street-farmers-market'
       return s.layers.includes(selectedLayer)
     })
   }, [selectedLayer])
@@ -96,6 +99,18 @@ export default function MapPage() {
           Tap to filter by type
         </p>
         <div className="flex flex-wrap gap-2 justify-center">
+          <button
+            onClick={() => setSelectedLayer(null)}
+            className={`
+              px-3 py-1.5 rounded-full text-xs font-mono transition-all border
+              ${selectedLayer === null
+                ? 'bg-[#0d1f3c] text-white border-transparent'
+                : 'bg-transparent border-[#1a3560]/20 text-[#1a3560] opacity-50 hover:opacity-80'
+              }
+            `}
+          >
+            All
+          </button>
           {layers.map(layer => {
             const active = selectedLayer === layer.id
             return (
@@ -109,7 +124,6 @@ export default function MapPage() {
                     ? 'text-white border-transparent'
                     : 'bg-transparent border-[#1a3560]/20 text-[#1a3560] opacity-50 hover:opacity-80'
                   }
-                  ${layer.id === 'coffee' ? 'ring-1 ring-[#c9a060]/30' : ''}
                 `}
                 style={active ? { backgroundColor: layer.color } : {}}
               >
@@ -334,11 +348,11 @@ export default function MapPage() {
               <div className="w-4 h-4 rounded-full bg-[#0d1f3c] flex items-center justify-center">
                 <span className="text-white text-[7px] font-mono">1</span>
               </div>
-              <span className="font-mono text-[9px] text-[#1a3560] opacity-60">Core stop</span>
+              <span className="font-mono text-[9px] text-[#1a3560] opacity-60">Passport stop</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <div className="w-3 h-3 rounded-sm bg-[#1a3560] rotate-45" />
-              <span className="font-mono text-[9px] text-[#1a3560] opacity-60">Bonus</span>
+              <div className="w-3 h-3 rounded-full bg-[#2a6b3a] opacity-60" />
+              <span className="font-mono text-[9px] text-[#1a3560] opacity-60">Also on corridor</span>
             </div>
           </div>
         </div>

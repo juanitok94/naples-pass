@@ -6,7 +6,7 @@
     "bg": "#f5f0e8",
     "icon": "☕",
     "passportLayer": true,
-    "description": "The 10 core passport stops — coffee, tea, bakery, books"
+    "description": "Coffee stops on the corridor"
   },
   {
     "id": "tea",
@@ -27,12 +27,30 @@
     "description": "Artisan bakeries and pastry shops"
   },
   {
-    "id": "books",
-    "label": "Books",
-    "color": "#3d2b6b",
-    "bg": "#eeeaf5",
-    "icon": "📖",
+    "id": "restaurant",
+    "label": "Restaurant",
+    "color": "#1a3560",
+    "bg": "#e8ecf5",
+    "icon": "🍽",
     "passportLayer": false,
-    "description": "Independent bookstores"
+    "description": "Evening dining on Fifth Avenue South"
+  },
+  {
+    "id": "dessert",
+    "label": "Dessert",
+    "color": "#d4ac0d",
+    "bg": "#fdf6e8",
+    "icon": "🍦",
+    "passportLayer": false,
+    "description": "Gelato and dessert stops"
+  },
+  {
+    "id": "market",
+    "label": "Market",
+    "color": "#2a6b3a",
+    "bg": "#eaf5ec",
+    "icon": "🌿",
+    "passportLayer": false,
+    "description": "Farmers market — Saturdays only"
   }
 ]
